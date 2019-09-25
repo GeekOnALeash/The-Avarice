@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fa19ed289654c51b639a100929e6f4, type: 3}
+  m_Name: LaserBarrier@Damage
+  m_EditorClassIdentifier: 
+  armamentType: 2
+  areaOfEffect: 0
+  damageAmount: 10
+  duration: 0
+  effectName: Laser Barrier
+  effectDescription: Damage caused by Laser Barrier in the form of heat
+  effectSprite: {fileID: 0}
+  canBeBlocked: 0
+  cooldown: 0
+  knocksBackPlayer: 0
+  randomParticleEffects: 0
+  particleEffects: {fileID: 11400000, guid: 05123b2a0e928406c835199bb97e439e, type: 2}
+  particleEffectsArray: []

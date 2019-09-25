@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Scenery
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d55184a835c234741af3c13470064820, type: 3}
+    totalSpriteSurfaceArea: 398386
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: f9c0aa8013026ca5cc8493e85732620f
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f6082000f1bb447b287e58ef2f97540c, type: 3}
+  - {fileID: 21300000, guid: 96501510006b34b7c8b91335c6a876c4, type: 3}
+  - {fileID: 21300000, guid: 20e4b2201970f42028ec2080a937e0d3, type: 3}
+  - {fileID: 21300000, guid: 74f9a820d33c64edcb354349837d3a1f, type: 3}
+  - {fileID: 21300000, guid: a25bc8704e0994322854ec1dc43f5ef3, type: 3}
+  - {fileID: 21300000, guid: d814cd80513b542dba44e81356b65e80, type: 3}
+  - {fileID: 21300000, guid: 12e055d08cc154d3a915b12604d52f5e, type: 3}
+  - {fileID: 21300000, guid: 924f3de04b7f24029a8b7391659d0774, type: 3}
+  - {fileID: 21300000, guid: eaaa52116c7024380bb6d7f33d63d274, type: 3}
+  - {fileID: 21300000, guid: 10b4d3515c5cf42b3b2dc5e69965f0b5, type: 3}
+  - {fileID: 21300000, guid: f173f1612cc0042cd96fa5356bd87524, type: 3}
+  - {fileID: 21300000, guid: ffcdfda14e72e483388dbc7dcd3289f7, type: 3}
+  - {fileID: 21300000, guid: ab37f11218e3c483fb728d5be100343b, type: 3}
+  - {fileID: 21300000, guid: e32a9982026eb4eb1be0b2bad1d16af7, type: 3}
+  - {fileID: 21300000, guid: 49f1e403180e94eb6b708ade10e8d198, type: 3}
+  - {fileID: 21300000, guid: 0ca7be033e2c14e84a800ec72c8e9075, type: 3}
+  - {fileID: 21300000, guid: 54189c139c69f4e5fa869cf150a46a0d, type: 3}
+  - {fileID: 21300000, guid: 1ce44b638d5b340c990ae045af63a83c, type: 3}
+  - {fileID: 21300000, guid: 5de6c304148974faa937870516776660, type: 3}
+  - {fileID: 21300000, guid: d8c6260423c3141fe826112f9bf82731, type: 3}
+  - {fileID: 21300000, guid: 595e3f04316b14d5d992d5b217651e1e, type: 3}
+  - {fileID: 21300000, guid: 9db48e54481044b868ddcaf2e31c6f52, type: 3}
+  - {fileID: 21300000, guid: 095f046443fc94215b64feed47c30f9b, type: 3}
+  - {fileID: 21300000, guid: eb8d9ba45690a4becb5f2aefa76aa920, type: 3}
+  - {fileID: 21300000, guid: 515bc1b47c6c8454080ff81be6c967f0, type: 3}
+  - {fileID: 21300000, guid: 892ae2d4670614d41bc62652284b850a, type: 3}
+  - {fileID: 21300000, guid: dd1c9ee4b37574ec0b761e9b03456a40, type: 3}
+  - {fileID: 21300000, guid: 208f03156e243472c9e864e5c598eb47, type: 3}
+  - {fileID: 21300000, guid: a1fcdf25187c14eca893477937f9e71a, type: 3}
+  - {fileID: 21300000, guid: c5ed6a354128f4c05a0b016c095fa886, type: 3}
+  - {fileID: 21300000, guid: c0e68c55a353b4739a4d7e0510f81404, type: 3}
+  - {fileID: 21300000, guid: b9cce0651c10e416a8c3c9af6865d83f, type: 3}
+  - {fileID: 21300000, guid: f97eba7559b2a45e4a7b012eb818378a, type: 3}
+  - {fileID: 21300000, guid: e1855c75450254410af86d448ee50ba7, type: 3}
+  - {fileID: 21300000, guid: 18b729951ff0e4ca8a9439e8081f8bee, type: 3}
+  - {fileID: 21300000, guid: ed017bc5a3d384bf1ad833620b25d483, type: 3}
+  - {fileID: 21300000, guid: 097e01d57623d4ba087edb6c53019164, type: 3}
+  - {fileID: 21300000, guid: 825c6c669ae4c4a108139cc0b740fa90, type: 3}
+  - {fileID: 21300000, guid: 999671863a04c471bbe029a1c8c1b24a, type: 3}
+  - {fileID: 21300000, guid: 78b5a327d835247458f833a3ccdbb884, type: 3}
+  - {fileID: 21300000, guid: a1d71837e1fe54f5688cb6424fb3242f, type: 3}
+  - {fileID: 21300000, guid: 34997447b347644a6ac363ef3bdcd7f6, type: 3}
+  - {fileID: 21300000, guid: c6d9cc47fa2364ab38a7a0f1ec97a091, type: 3}
+  - {fileID: 21300000, guid: 81626867c04ea4fa2b8444d5b9be9d05, type: 3}
+  - {fileID: 21300000, guid: 98631c675a3764407896813ddd3ae267, type: 3}
+  - {fileID: 21300000, guid: b3b95987a0fd346649c03b7919666bf0, type: 3}
+  - {fileID: 21300000, guid: 4f3962c7c39284147a7a05f6b3f8431b, type: 3}
+  - {fileID: 21300000, guid: 58a2d448d10e84f62825a829f314d3c9, type: 3}
+  - {fileID: 21300000, guid: 1aa13648efc5e47a48920defd215d20c, type: 3}
+  - {fileID: 21300000, guid: 791767986b5034d5fa98fa83a1008138, type: 3}
+  - {fileID: 21300000, guid: 4d3df4f8ee71d4ef38dc3a0c4d73f3c5, type: 3}
+  - {fileID: 21300000, guid: 908dbcf8c7eff4e01aad64c1500afa2b, type: 3}
+  - {fileID: 21300000, guid: 148653397916042a1866a8fa3fef3e05, type: 3}
+  - {fileID: 21300000, guid: ea462d69dd8a14a5cb655b8a939ee2e5, type: 3}
+  - {fileID: 21300000, guid: fc259379cdd604456b088cdab45f1ebc, type: 3}
+  - {fileID: 21300000, guid: fdc13679ec9c0411fbc0eaa439c11aad, type: 3}
+  - {fileID: 21300000, guid: 8b4ce5c925f2f442cabfae0a686d0937, type: 3}
+  - {fileID: 21300000, guid: d530edf960ccd4db7adf1aaf845bb5e3, type: 3}
+  - {fileID: 21300000, guid: b5af341a877ec431aaddc6276354a7d2, type: 3}
+  - {fileID: 21300000, guid: 0f1ab23a48b7344a082f45d71f4f1d5a, type: 3}
+  - {fileID: 21300000, guid: 9b978a7a8708243cfb53c620d7603c9b, type: 3}
+  - {fileID: 21300000, guid: 98610deae575e4854a71bcfd12f54a99, type: 3}
+  - {fileID: 21300000, guid: 012951fa448264abea33264e795084db, type: 3}
+  - {fileID: 21300000, guid: da865c0baa3e54350b9b08210a760553, type: 3}
+  - {fileID: 21300000, guid: 0a706d0b181f4478ba1321f91ca7b728, type: 3}
+  - {fileID: 21300000, guid: 81856e0b61e534a1c9a48f1dbb6b9c56, type: 3}
+  - {fileID: 21300000, guid: 9ce5cd2b8495e4d688c160c668d826ff, type: 3}
+  - {fileID: 21300000, guid: a941bc7b166ee4716b80543d215a4d58, type: 3}
+  - {fileID: 21300000, guid: dbb361ab9e89e4566b16864e2619d878, type: 3}
+  - {fileID: 21300000, guid: e202f5cbbc3fa4221a7f8c0093a24eb8, type: 3}
+  - {fileID: 21300000, guid: 8354f9dbdc686424b89a532ce9978903, type: 3}
+  - {fileID: 21300000, guid: 779e85eb603dd4403846df8d652b2c7f, type: 3}
+  - {fileID: 21300000, guid: a304cceb32daf4fc0ac8fbafb83783ea, type: 3}
+  - {fileID: 21300000, guid: 5c037afbd5423419b9a32f6b1a822f5d, type: 3}
+  - {fileID: 21300000, guid: 9daa8a0ce48114a78bdea24a6ca90501, type: 3}
+  - {fileID: 21300000, guid: d716338cfe5874fa78c4ce1a4e484dac, type: 3}
+  - {fileID: 21300000, guid: 78cd659cf631f45199da0bc2139f2d86, type: 3}
+  - {fileID: 21300000, guid: 225e43ac214e540fba514b5813270803, type: 3}
+  - {fileID: 21300000, guid: c03230dc841de4f11a91b96904c54f21, type: 3}
+  - {fileID: 21300000, guid: b3362fdcb3f1e4663a0aa0b78885b772, type: 3}
+  - {fileID: 21300000, guid: 7b64a50db89df49169223b646e44f1bc, type: 3}
+  - {fileID: 21300000, guid: fbf7f60dde1ec4360a2c398bfea08c03, type: 3}
+  - {fileID: 21300000, guid: 4f25501da98004311907b4aa46eef485, type: 3}
+  - {fileID: 21300000, guid: 4c47181dc03f04fe689262e3fcd35a86, type: 3}
+  - {fileID: 21300000, guid: e6d9781da96a34cbe9d84bff9a3216ef, type: 3}
+  - {fileID: 21300000, guid: 3d229f8d7ff9640ce9fcfd349bdaca0e, type: 3}
+  - {fileID: 21300000, guid: 7616aaadcba054820af4edc0536091c8, type: 3}
+  - {fileID: 21300000, guid: bbf42bdd764364b72889c453dd3cc36b, type: 3}
+  - {fileID: 21300000, guid: d9072dfd1473946afb5ca823ff51a178, type: 3}
+  - {fileID: 21300000, guid: e2c5c72e417ef42d589302d9014ecf37, type: 3}
+  - {fileID: 21300000, guid: 080e2ace0a9ce4e7c84e415b7e685079, type: 3}
+  - {fileID: 21300000, guid: 18bedf0f454a54bc4ad34c4a4681c34d, type: 3}
+  - {fileID: 21300000, guid: e1b1001fb979f4c8cab6318a443c47f9, type: 3}
+  - {fileID: 21300000, guid: d3b4e83fc084a4298b312ee11db5b825, type: 3}
+  - {fileID: 21300000, guid: 4eeb0a7f5f3554d6e9029ef4e0dc2738, type: 3}
+  - {fileID: 21300000, guid: a1ed88af142d54e80a8359e86cccc9fe, type: 3}
+  - {fileID: 21300000, guid: cd2d1cafb3bf147568ab6639e459a02f, type: 3}
+  - {fileID: 21300000, guid: 6b8adcafb1eb842cfaaed4ee0a645492, type: 3}
+  - {fileID: 21300000, guid: 7195d9bf8fa59480787af1cf33ccf813, type: 3}
+  - {fileID: 21300000, guid: db2ee0cf99d924756a70da324dff488d, type: 3}
+  - {fileID: 21300000, guid: 0035d9cf81e13449c898812f3a94aa97, type: 3}
+  - {fileID: 21300000, guid: 5a967def804cf424bbbb2e1e5bb1924a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Rail Top
+  - Wall Upper Left Corner
+  - Blue Light
+  - Floor Tile Side Path With Inner Corner LH
+  - Doors Open
+  - Scratch 4
+  - Window 1 Middle
+  - Wall Front Double Corners Up to Floor
+  - Floor Tile 1
+  - Wall With Floor Right Side
+  - Wall Rear Side To Both Corners Down
+  - Wall Rear Side
+  - Roof
+  - Wall Front With Left Corner
+  - Floor Tile Side Path
+  - Scratch 2
+  - Window 1 Right
+  - Wall Left to Corner Inner
+  - Wall Lower Corners Double
+  - Wall Light@Bounced Light
+  - Under Floor Lighting
+  - Wall With Top Both Sides Corner Right And Inner Left Corner
+  - Force Field
+  - Floor Tile 3 Vented
+  - Wall With Floor Top
+  - Door Right Closed
+  - Wall Sides Double
+  - Wall Right Side
+  - Wall Lower Left Corner
+  - Floor Tile Double Path
+  - Rail Left Corner Top
+  - Wall Double With Upper Corners
+  - Floor Tile Side Path Inner to Outer Corner
+  - Floor Tile 2
+  - Wall Corners Inner Double
+  - Wall With Floor Corner Right
+  - Door Frame Top
+  - Door Right Open
+  - Wall With Floor Left Corner
+  - Wall Upper Right Corner
+  - Door Left Open
+  - Stairs Front Facing
+  - Scratch 3
+  - Wall Front Side Both Corners
+  - Floor Tile Double Path To Corners
+  - Wall Front With Right Corner
+  - Floor Tile Side Path Corner
+  - Rail Left Side
+  - Wall Front Side With Right Closed Corner
+  - Light Tint Overlay
+  - Rail Left Corner Bottom
+  - Doors Half Open
+  - Wall Lower Right Corner
+  - Floor Tile Path Four Inner Corners
+  - Wall Left Side
+  - Stairs 1
+  - Door Right Half Open
+  - Floor Tile 2 Vented
+  - Floor Tile Double Path With Inner Corners
+  - Wall Shadow From Corner
+  - Force Field - Noise 2
+  - Door Left Closed
+  - Force Field - Noise 3
+  - Floor Tile Side Path With Inner Corner
+  - Wall Front Side
+  - Wall Front Side Blank
+  - Wall With Top To Corner Right
+  - Wall With Top Left Corner
+  - Doors Closed
+  - Wall With Top Left Side
+  - Wall With Top Both Sides
+  - Laser Barrier
+  - Wall With Top Both Sides Corner Right
+  - Window 1 Left
+  - Wall Rear Side To Right Corner Down
+  - Blue Light Top Roof
+  - Rail Right Corner Bottom
+  - Scratch 1
+  - Floor Tile 3
+  - Wall With Top
+  - Wall Rear Side To Left Corner Down
+  - Wall With Top Both Sides Inner Left Corner
+  - Wall Shadow From Inner Corner
+  - Shadow From Stairs
+  - Floor Tile Path Inner Corners
+  - Wall Front Side With Left Closed Corner
+  - Rail Right Side
+  - Rail 1
+  - Floor Shadow From Wall
+  - Rail Right Corner Top
+  - Door Frame
+  - Door Left Half Open
+  - Wall Double With Upper Left Corner
+  - Wall With Top Both Corners
+  - Floor Tile Double Path Inner Corners
+  - Force Field - Noise 1
+  - Wall With Floor Left Side
+  - Wall With Top Right Side
+  - Wall Front Side
+  - Floor Tile Side Path Inner Corner
+  - Floor Tile Side Path Top And Bottom Inner Corners
+  - Floor Tile 1 Vented
+  m_Tag: Scenery
+  m_IsVariant: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb7d0233b544bbfbd4b0b660304c8c6, type: 3}
+  m_Name: WalkUp@Player_AnimState
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -598487096965737429, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -7055102976714749990, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -5390269135481255371, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -2556477750983418990, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: 4581799750676474876, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: 7695320274623510488, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -6646145922322514797, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -9217789975395799583, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}

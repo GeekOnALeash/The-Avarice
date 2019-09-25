@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2fce3814a774d1d90eb60d60151430, type: 3}
+  m_Name: DefaultKeybindings
+  m_EditorClassIdentifier: 
+  primary:
+    inputType: 1
+    keyCode: 0
+    mouseButton: 0
+    reactOnPress: 2
+  secondary:
+    inputType: 1
+    keyCode: 0
+    mouseButton: 1
+    reactOnPress: 2
+  middle:
+    inputType: 1
+    keyCode: 0
+    mouseButton: 2
+    reactOnPress: 2
+  left:
+    inputType: 0
+    keyCode: 276
+    mouseButton: -1
+    reactOnPress: 2
+  leftAlternative:
+    inputType: 0
+    keyCode: 97
+    mouseButton: -1
+    reactOnPress: 2
+  right:
+    inputType: 0
+    keyCode: 275
+    mouseButton: -1
+    reactOnPress: 2
+  rightAlternative:
+    inputType: 0
+    keyCode: 100
+    mouseButton: -1
+    reactOnPress: 2
+  up:
+    inputType: 0
+    keyCode: 273
+    mouseButton: -1
+    reactOnPress: 2
+  upAlternative:
+    inputType: 0
+    keyCode: 119
+    mouseButton: -1
+    reactOnPress: 2
+  down:
+    inputType: 0
+    keyCode: 274
+    mouseButton: -1
+    reactOnPress: 2
+  downAlternative:
+    inputType: 0
+    keyCode: 115
+    mouseButton: -1
+    reactOnPress: 2
+  interact:
+    inputType: 0
+    keyCode: 13
+    mouseButton: -1
+    reactOnPress: 1
+  interactAlternative:
+    inputType: 0
+    keyCode: 101
+    mouseButton: -1
+    reactOnPress: 1
+  startDialogue:
+    inputType: 0
+    keyCode: 99
+    mouseButton: -1
+    reactOnPress: 1
+  startDialogueAlternative:
+    inputType: 0
+    keyCode: 305
+    mouseButton: -1
+    reactOnPress: 1
+  pause:
+    inputType: 0
+    keyCode: 27
+    mouseButton: -1
+    reactOnPress: 2
+  pauseAlternative:
+    inputType: 0
+    keyCode: 0
+    mouseButton: -1
+    reactOnPress: 2

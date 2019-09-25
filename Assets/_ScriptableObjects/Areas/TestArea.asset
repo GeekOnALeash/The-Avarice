@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa0e757d9cc4688abc3e7e1dd56f09a, type: 3}
+  m_Name: TestArea
+  m_EditorClassIdentifier: 
+  scenesToLoad:
+  - sceneAsset: {fileID: 102900000, guid: 5f232fc7b109f4fcf93efd8cea1716d4, type: 3}
+    sceneName: __Scenes/Build/3_1_Area_1
+  - sceneAsset: {fileID: 102900000, guid: 4d6e6b4f988f246df8013c21adf69b11, type: 3}
+    sceneName: __Scenes/Build/3_2_Characters
+  backgoundMusic: {fileID: 0}
+  randomSounds: []
+  name: 
+  description: 

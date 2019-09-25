@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!95 &2438012343664775066
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649809957314620189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 951390d73c12349ada64caab63e5fed3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &5881612602163314558
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5150677706471658595, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_Name
+      value: Vending Machine Light Faulty
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910863436575425356, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910863436575425356, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910863436575425356, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910863436575425356, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910863436575425356, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910863436575425356, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004195875901233699, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325721706127817687, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325721706127817687, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2130890148210447566, guid: f0de5b89061eb4621a243baa43af6703, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f0de5b89061eb4621a243baa43af6703, type: 3}
+--- !u!1 &1649809957314620189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5150677706471658595, guid: f0de5b89061eb4621a243baa43af6703,
+    type: 3}
+  m_PrefabInstance: {fileID: 5881612602163314558}
+  m_PrefabAsset: {fileID: 0}

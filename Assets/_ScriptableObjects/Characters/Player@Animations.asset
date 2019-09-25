@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a5484d2bdc43429819f211e75164ed, type: 3}
+  m_Name: Player@Animations
+  m_EditorClassIdentifier: 
+  idle:
+  - {fileID: 11400000, guid: d5cd420c0290d4b4eba1c04667752540, type: 2}
+  walkRight: {fileID: 11400000, guid: f18297f404b1645f986cb400f15eed79, type: 2}
+  walkLeft: {fileID: 11400000, guid: fa1ad53c6d85545a8aa9405615fe36bf, type: 2}
+  walkUp: {fileID: 11400000, guid: 0045ebb7c06334c3c81ca26f80c16dda, type: 2}
+  walkDown: {fileID: 11400000, guid: a108dcb6fbd1a4fa2b32f7c87149af16, type: 2}

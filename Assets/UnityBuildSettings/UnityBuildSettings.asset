@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5886119a5c7b34d8872ab527ca3e1b, type: 3}
+  m_Name: UnityBuildSettings
+  m_EditorClassIdentifier: 
+  _basicSettings:
+    baseBuildFolder: /Users/andy/Desktop/Build/The Avarice
+    buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
+    openFolderPostBuild: 1
+  _productParameters:
+    buildCounter: 5
+    lastGeneratedVersion: 1.0.1597.3511
+    version: 1.0.$DAYSSINCE("January 1, 2015").$SECONDS
+    autoGenerate: 1
+  _releaseTypeList:
+    releaseTypes:
+    - typeName: Dev
+      bundleIndentifier: 
+      companyName: ArkAngel Games
+      productName: The Avarice
+      developmentBuild: 1
+      allowDebugging: 1
+      enableHeadlessMode: 0
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: 41eb3f6c7fec5429b9fea9523238b436
+    - typeName: Release
+      bundleIndentifier: 
+      companyName: ArkAngel Games
+      productName: The Avarice
+      developmentBuild: 0
+      allowDebugging: 0
+      enableHeadlessMode: 0
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: b21cbe1b69c29419f8ca45d1ed546cfa
+        - fileGUID: ced943b82a5dd4a528ecd8ac77c50ddf
+        - fileGUID: 9b724018035204af6b9601a2ef0b7a17
+        - fileGUID: 41eb3f6c7fec5429b9fea9523238b436
+        - fileGUID: 11a76eb74f25f4a93aa9aa026728696f
+  _platformList:
+    platforms:
+    - enabled: 1
+      distributionList:
+        distributions: []
+      architectures:
+      - target: 2
+        name: OSX
+        enabled: 1
+        binaryNameFormat: 
+      variants: []
+      platformName: OSX
+      dataDirNameFormat: '{0}.app/Contents'
+      targetGroup: 1
+  _projectConfigurations:
+    configSet:
+      _Buckets: ffffffffffffffff0500000004000000020000000000000003000000
+      _HashCodes: 77f2dd10cccc211737671a34ed43d334ba55b93b2d6dfd4800000000
+      _Next: ffffffffffffffffffffffffffffffff01000000ffffffff00000000
+      _Count: 6
+      _Version: 6
+      _FreeList: -1
+      _FreeCount: 0
+      _Keys:
+      - Dev/OSX/OSX
+      - Dev/OSX
+      - Dev
+      - Release/OSX/OSX
+      - Release/OSX
+      - Release
+      - 
+      _Values:
+      - enabled: 0
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Dev/OSX/OSX
+      - enabled: 1
+        childKeys:
+        - Dev/OSX
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Release/OSX/OSX
+      - enabled: 1
+        childKeys:
+        - Release/OSX
+      - enabled: 1
+        childKeys: []
+    showViewOptions: 0
+    showConfigs: 0
+    showBuildInfo: 0
+    hideDisabled: 0
+    treeView: 0
+    selectedKeyChain: Release/OSX/OSX
+  _preBuildActions:
+    buildActions: []
+  _postBuildActions:
+    buildActions: []

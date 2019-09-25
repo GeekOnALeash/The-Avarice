@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Objects
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 3cb405f9f0b684a15a857e31a70d0fe2, type: 3}
+    totalSpriteSurfaceArea: 37160
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: a84f67724c2d151e86f79c56cdcc1106
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0e242f41662e74aae83e1f89dd5d2be9, type: 3}
+  - {fileID: 21300000, guid: 727e56e1257994a9780e01b30c6f5691, type: 3}
+  - {fileID: 21300000, guid: ab037be183bdb4ebe8c7f54256038af0, type: 3}
+  - {fileID: 21300000, guid: 96d86d324f0634b098d8d334cc9f1a12, type: 3}
+  - {fileID: 21300000, guid: 8b70d5537f2664b1cbb0a0aa1ccaaa1c, type: 3}
+  - {fileID: 21300000, guid: d8166454165ba4a26a8e31e70bea3cfe, type: 3}
+  - {fileID: 21300000, guid: 65e0e854aeb0848bbabfae639360a0c9, type: 3}
+  - {fileID: 21300000, guid: 10a16bf498fd1413b9938ff461af3e6c, type: 3}
+  - {fileID: 21300000, guid: cec99ff496db4486d9ea945dd8f7b1cb, type: 3}
+  - {fileID: 21300000, guid: b23f3665780784b92962646d8e6d567d, type: 3}
+  - {fileID: 21300000, guid: 9aef87b542697421ca1e9660727b160e, type: 3}
+  - {fileID: 21300000, guid: 3a76ad76142ac471fa1541ad204ff6de, type: 3}
+  - {fileID: 21300000, guid: ccdb6ab67fda9417c9d833a88a5538a3, type: 3}
+  - {fileID: 21300000, guid: bb1cce278599c4da298d061a867a08b6, type: 3}
+  - {fileID: 21300000, guid: 3fd3b1b72893745a09987a2b5079469d, type: 3}
+  - {fileID: 21300000, guid: f36e4a58e34e248849377928319a0162, type: 3}
+  - {fileID: 21300000, guid: 96433bd8bdbc3429d90f0457e3a15774, type: 3}
+  - {fileID: 21300000, guid: 707960c9f38bd492c936ee78508417a4, type: 3}
+  - {fileID: 21300000, guid: d56978c9b1d6b413b8819f50ed437264, type: 3}
+  - {fileID: 21300000, guid: 223a72d9ce89a4049b9256f5e3df4146, type: 3}
+  - {fileID: 21300000, guid: b1e14c4ad18294f6591a5965b8e75bda, type: 3}
+  - {fileID: 21300000, guid: 36769c6a4158a4ff1b7e1ad2ba900b40, type: 3}
+  - {fileID: 21300000, guid: 8d2d7d1b5ff064be592ffba33f6eff32, type: 3}
+  - {fileID: 21300000, guid: f627412b26a034faaa95ef6785f6888d, type: 3}
+  - {fileID: 21300000, guid: ceca723bcf1c34a8083126d0fd214b49, type: 3}
+  - {fileID: 21300000, guid: 0e467c7b6965545e7b1b6eb174439b9c, type: 3}
+  - {fileID: 21300000, guid: 3e8537abe9c4d42f3afc4af159bc0e34, type: 3}
+  - {fileID: 21300000, guid: eef0111c02124478fbd696356f09f90f, type: 3}
+  - {fileID: 21300000, guid: b5d6d83cfa6c64eb7b14932192476705, type: 3}
+  - {fileID: 21300000, guid: 7dff6b8c508334b63b69e2ff74495ab5, type: 3}
+  - {fileID: 21300000, guid: 9955c3cc420bf49878eece5e2f92d2d1, type: 3}
+  - {fileID: 21300000, guid: 3bcc89dcd00484d37a3e66ea995d9df4, type: 3}
+  - {fileID: 21300000, guid: b939d8fcfd1e44770a0f800f373435e4, type: 3}
+  - {fileID: 21300000, guid: 74f6ba6e0ac6743f497710ced3e3d859, type: 3}
+  - {fileID: 21300000, guid: 74539ace3cb794a988602ec093d5876a, type: 3}
+  - {fileID: 21300000, guid: e91801de791a64f5e92b4855fde51a6c, type: 3}
+  - {fileID: 21300000, guid: bd674dee0ac6c40d2a0427fe9030d4c0, type: 3}
+  - {fileID: 21300000, guid: 78e8962ff2bb143bb8a3112c206bf569, type: 3}
+  - {fileID: 21300000, guid: f967355fdf410429fae5ad246d518e6d, type: 3}
+  - {fileID: 21300000, guid: 438dfdbfbffd64f7e927e8901d6345c3, type: 3}
+  - {fileID: 21300000, guid: 0b3f26cf8339d46c0a3e39464a022ff1, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Computer Terminal Display 2
+  - Computer Terminal Display 1
+  - Frame1@Waveform Medium
+  - Frame2@Waveform Medium
+  - Grate 1
+  - Bars 3@Barchart-Small
+  - Bars 5@Barchart-Small
+  - Display@Mask
+  - Extractor Fan Rotated
+  - Spaceship Screen Image 1
+  - Bars 4@Barchart-Small
+  - Bars 1@Barchart-Medium
+  - Display Frame
+  - Barrel
+  - Large Computer Display
+  - Desk With Computer
+  - Display LCD
+  - Frame3@Waveform Large
+  - Spaceship Screen Image 3
+  - Desk With Computer Front
+  - Vending Machine Light Off
+  - Frame2@Waveform Large
+  - Spaceship Screen Image 2
+  - Bars 5@Barchart-Medium
+  - Display@Mask
+  - Bars 2@Barchart-Small
+  - Bars 3@Barchart-Medium
+  - Drawers
+  - Bars 2@Barchart-Medium
+  - Extractor Fan
+  - Barrel Shadow
+  - Light Frame
+  - Vending Machine Light On
+  - Bars 1@Barchart-Small
+  - Computer Terminal Display 3
+  - Computer Terminal Blank
+  - Bars 4@Barchart-Medium
+  - Frame3@Waveform Medium
+  - Frame1@Waveform Large
+  - Barrel_n
+  - Light Frame@Cookie
+  m_Tag: Objects
+  m_IsVariant: 0

@@ -1,0 +1,14 @@
+{
+    "name": "SimpleSpriteAnimator.demo",
+    "references": [
+        "GUID:465477b55e085487a8c10c5f9a766dae"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

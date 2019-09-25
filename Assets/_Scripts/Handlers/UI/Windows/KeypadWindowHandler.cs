@@ -1,0 +1,95 @@
+using com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects;
+using com.ArkAngelApps.UtilityLibraries.Extensions;
+using JetBrains.Annotations;
+using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
+{
+	public class KeypadWindowHandler : WindowHandler
+	{
+		public Text displayText;
+
+		internal int keypadCode;
+		internal KeypadHandler calledBy;
+
+		private int _codeLength = 4;
+		private string _typedCode;
+		private string _textToDisplay;
+		private int _keysPressedCount;
+		private const string DisplayPadding = "_";
+
+		private Animator _animator;
+		private static readonly int __Shake = Animator.StringToHash("Shake");
+
+		protected override void Start()
+		{
+			base.Start();
+			
+			ResetKeypad();
+			_animator = GetComponent<Animator>();
+			Assert.IsNotNull(_animator, "_animator is null");
+		}
+
+		private void OnDisable()
+		{
+			ResetKeypad();
+		}
+
+		private void PadDisplayWithDashes()
+		{
+			_textToDisplay = "";
+			
+			for (int i = 1; i <= _codeLength; i++)
+			{
+				_textToDisplay = $"{_textToDisplay}{DisplayPadding}";
+			}
+			
+			UpdateDisplay(_textToDisplay);
+		}
+
+		[UsedImplicitly]
+		public void OnButtonPressed()
+		{
+			_keysPressedCount += 1;
+			ReplaceCharAtPos(EventSystem.current.currentSelectedGameObject.name);
+
+			if (_keysPressedCount < _codeLength)
+			{
+				return;
+			}
+
+			if (CheckCode())
+			{
+				ResetKeypad();
+				calledBy.CodeCorrect();
+				calledBy = null;
+				return;
+			}
+
+			_animator.SetTrigger(__Shake);
+		}
+
+		private void ReplaceCharAtPos(string newString)
+		{
+			_textToDisplay = _textToDisplay.ReplaceAt(_keysPressedCount - 1, 1, newString);
+			UpdateDisplay(_textToDisplay);
+		}
+
+		private void UpdateDisplay(string newString)
+		{
+			displayText.text = newString;
+		}
+
+		private void ResetKeypad()
+		{
+			PadDisplayWithDashes();
+			_typedCode = null;
+			_keysPressedCount = 0;
+		}
+
+		private bool CheckCode() => keypadCode == int.Parse(_textToDisplay);
+	}
+}

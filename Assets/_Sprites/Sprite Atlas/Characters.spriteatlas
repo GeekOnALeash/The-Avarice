@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Characters
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 3283b5a87e6384b46a3030e6730dc545, type: 3}
+    totalSpriteSurfaceArea: 46770
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: ed752a52cc572ef45fce13aeda296b35
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 6c876ec1b9129467cb27bda739bf9452, type: 3}
+  - {fileID: 21300000, guid: a2ff3212cbb5744178bddb897687942c, type: 3}
+  - {fileID: 21300000, guid: 38c876e285dd34bab9134f6e18cf5686, type: 3}
+  - {fileID: 21300000, guid: aab3d2153ad8f4db9a78e7917e8be8e6, type: 3}
+  - {fileID: 21300000, guid: 5468add7c3eda415dbcce58865c95ed2, type: 3}
+  - {fileID: 21300000, guid: 8cc8d0281e7d24825b463fe3c3e5e10f, type: 3}
+  - {fileID: 21300000, guid: bc8b1459173be404fa4bea1b3bb340db, type: 3}
+  - {fileID: 21300020, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300022, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300018, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300002, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300016, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300012, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300014, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300010, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300006, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300000, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300004, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300008, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - {fileID: 21300000, guid: 7ab73b3ce8f264dd492f5af11434840e, type: 3}
+  - {fileID: 21300000, guid: 3e5268fdfdfc940bc8c693a4622c93eb, type: 3}
+  - {fileID: 21300024, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300020, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300022, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300018, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300002, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300016, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300012, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300014, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300010, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300006, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300000, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300004, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  - {fileID: 21300008, guid: a6771ebff91bc409194e0e74c6a03045, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - UI Head Female 1
+  - Male Base Head Rotated Left
+  - Male Base Head Rotated Right
+  - Male Base Front Blink 1
+  - Male Base Foot Forward Right
+  - UI Head Male 1
+  - Male Base Foot Forward Left
+  - Left Idle
+  - Left Walk 2
+  - Left Walk 1
+  - Rear Idle
+  - Front Walk 2
+  - Front Walk 1
+  - Front Idle
+  - Right Walk 2
+  - Right Walk 1
+  - Rear Walk 1
+  - Rear Walk 2
+  - Right Idle
+  - Male Base Front Blink 2
+  - Male Base Head Rotated
+  - Character Female 1_0
+  - Left Idle
+  - Left Walk 2
+  - Left Walk 1
+  - Rear Idle
+  - Front Walk 2
+  - Front Walk 1
+  - Front Idle
+  - Right Walk 2
+  - Right Walk 1
+  - Rear Walk 1
+  - Rear Walk 2
+  - Right Idle
+  m_Tag: Characters
+  m_IsVariant: 0

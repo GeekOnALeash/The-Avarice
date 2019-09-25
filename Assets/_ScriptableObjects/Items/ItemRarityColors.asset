@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ecf714b14084cbc96dc2c145f3d601, type: 3}
+  m_Name: ItemRarityColors
+  m_EditorClassIdentifier: 
+  crafted: {r: 0.8867924, g: 0.8638408, b: 0.12967247, a: 1}
+  common: {r: 0.10234957, g: 0.8679245, b: 0.1524378, a: 1}
+  uncommon: {r: 0.8773585, g: 0.56157726, b: 0.2027857, a: 1}
+  rare: {r: 0.8962264, g: 0.038047332, b: 0.038047332, a: 1}
+  unique: {r: 0.71483386, g: 0.08235291, b: 0.91764706, a: 1}
+  epic: {r: 0.096787095, g: 0.33631307, b: 0.8207547, a: 1}

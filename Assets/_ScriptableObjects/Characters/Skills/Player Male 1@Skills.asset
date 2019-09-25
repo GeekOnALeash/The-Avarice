@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53efc308951b40feb78d72ef9ae978e, type: 3}
+  m_Name: Player Male 1@Skills
+  m_EditorClassIdentifier: 
+  strength: {fileID: 11400000, guid: 3b6a7104606ab440caa689696ca13132, type: 2}
+  stamina: {fileID: 11400000, guid: b45c4287b1aa147cf95fe13cd22c1e8f, type: 2}
+  fortitude: {fileID: 11400000, guid: e33325115eb904db49f1bd113f853944, type: 2}
+  dexterity: {fileID: 11400000, guid: cd308a67634b24b2184541598ae6c162, type: 2}
+  intelligence: {fileID: 11400000, guid: 03a5f4ab57b564a8490cec8a96bbb3cf, type: 2}
+  charisma: {fileID: 11400000, guid: 0913fac52ee4b4b32bc1e4d589fdc043, type: 2}
+  wisdom: {fileID: 11400000, guid: 5404b86eaef4c4af3b92aa026d83d8a2, type: 2}
+  willpower: {fileID: 11400000, guid: b6dd8cc37fc0a4ad9b5c555739c6b996, type: 2}
+  perception: {fileID: 11400000, guid: 1bc2dad7330674c2489dc69ab70a89c0, type: 2}
+  luck: {fileID: 11400000, guid: b39d21024974b407aaa9fcba133c93fe, type: 2}

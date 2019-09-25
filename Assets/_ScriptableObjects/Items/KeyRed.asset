@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e93a15ef10f4090ad15b703bbe9a2c, type: 3}
+  m_Name: KeyRed
+  m_EditorClassIdentifier: 
+  description: Red Key Card for opening red locked barriers.
+  name: Key Card (Red)
+  image: {fileID: 21300000, guid: 9370dc25cfaef411c9700604a1cf7963, type: 3}
+  inventoryIcon: {fileID: 21300000, guid: 9370dc25cfaef411c9700604a1cf7963, type: 3}
+  itemType: 0
+  itemRarity: 4
+  itemRarityColorData: {fileID: 11400000, guid: 4db00f56df2de48af8427b6bb8c6fc65,
+    type: 2}
+  color: {r: 0.6313726, g: 0.23921569, b: 0.3254902, a: 1}
+  canPickUp: 1
+  useOnPickup: 0
+  dropable: 0
+  stackable: 0
+  sellable: 0
+  usable: 0
+  destroyAfterUse: 0
+  destroyAfterUseDelay: 0.1
+  maximumCapacity: 1
+  value: 0
+  weight: 0
+  requiredToPickup: 1
+  requiredPickupSkillType: 4
+  requiredPickupSkillLevel: 10
+  requiredToUse: 0
+  requiredUseSkillType: 0
+  requiredUseSkillLevel: 0

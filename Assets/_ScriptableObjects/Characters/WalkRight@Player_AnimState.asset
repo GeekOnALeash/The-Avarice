@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb7d0233b544bbfbd4b0b660304c8c6, type: 3}
+  m_Name: WalkRight@Player_AnimState
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -3567694638849827189, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: 8048259028102820117, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: 6066782878555405229, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: 1913241576779720102, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -1512015765354629354, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: 8420176596530533038, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -1748020926718136722, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}
+  - {fileID: -4651910019423148799, guid: f270f4a0a39794ab9baa62e89f29f280, type: 3}

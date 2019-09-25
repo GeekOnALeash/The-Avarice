@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Characters
+  - UI
+  - Enemy
+  - Laser
+  - Controllers
+  - Items
+  - FxTemporaire
+  - Objects
+  - Barriers
+  - Walls
+  - Floor
+  - Lighting
+  - NPC
+  - ItemContainer
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Walls
+  - Objects
+  - Player
+  - NPC
+  - Enemy
+  - Shadow Caster
+  - Lighting
+  - Obstacle
+  - Triggers
+  - Deactivated Obstacles
+  - Items
+  - Decals
+  - Roof
+  - Post Processing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2763166215
+    locked: 0
+  - name: Under Floor
+    uniqueID: 422365139
+    locked: 0
+  - name: Lighting Under Floors
+    uniqueID: 1288795645
+    locked: 0
+  - name: Floor
+    uniqueID: 1798751837
+    locked: 0
+  - name: Stairs
+    uniqueID: 1721094909
+    locked: 0
+  - name: Lighting Behind Walls
+    uniqueID: 1861650685
+    locked: 0
+  - name: Walls Front Facing
+    uniqueID: 3131993583
+    locked: 0
+  - name: Walls Front Facing Lower
+    uniqueID: 4286177665
+    locked: 0
+  - name: Walls Top Of Floor On Roof
+    uniqueID: 69101165
+    locked: 0
+  - name: Shadow Over Doors
+    uniqueID: 287345009
+    locked: 0
+  - name: Wall Mounted
+    uniqueID: 2975780923
+    locked: 0
+  - name: Display Contents
+    uniqueID: 800508979
+    locked: 0
+  - name: Deycals
+    uniqueID: 3194923597
+    locked: 0
+  - name: Items
+    uniqueID: 2388050463
+    locked: 0
+  - name: Dynamic Sorting Layer
+    uniqueID: 3393972251
+    locked: 0
+  - name: Shadows
+    uniqueID: 2265521555
+    locked: 0
+  - name: Walls
+    uniqueID: 3235185697
+    locked: 0
+  - name: Roof
+    uniqueID: 3131911101
+    locked: 0
+  - name: Lighting
+    uniqueID: 755452723
+    locked: 0
+  - name: FX
+    uniqueID: 3195191643
+    locked: 0
+  - name: UI
+    uniqueID: 2915643135
+    locked: 0

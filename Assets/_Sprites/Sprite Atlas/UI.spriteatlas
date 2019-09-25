@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 2c875c61fbdbe46bb99dca8b62aac09a, type: 3}
+    totalSpriteSurfaceArea: 16353
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 959e338c338b07c45af76ff785fbe139
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e3adf84068a6640d688b41c03075de8a, type: 3}
+  - {fileID: 21300000, guid: 154b00b0ff93d4f7ca8c0c169593d3dc, type: 3}
+  - {fileID: 21300000, guid: e433de61ca6ad496cb1773c9b66e48f3, type: 3}
+  - {fileID: 21300000, guid: 555f92326bda7422e8ed72cdb04603eb, type: 3}
+  - {fileID: 21300000, guid: 36442592ab9304693a63f9f6ddc35584, type: 3}
+  - {fileID: 21300000, guid: 07309f53fb8b64d6a917846aadcf0996, type: 3}
+  - {fileID: 21300000, guid: e9ca6283e082a4df8a4197b781cb6c35, type: 3}
+  - {fileID: 21300000, guid: 58ef4cd302969448992d627ff5bad638, type: 3}
+  - {fileID: 21300000, guid: 92543e649b0a945da9dc5d528d8b4b02, type: 3}
+  - {fileID: 21300000, guid: 54fabd355e2e849cea492d4f6fa48260, type: 3}
+  - {fileID: 21300000, guid: 971deb856b6414923b54558c720485cf, type: 3}
+  - {fileID: 21300000, guid: 2985ce56ceedd45a894419a0b7a442c1, type: 3}
+  - {fileID: 21300000, guid: c9b482e6e3f1040ab940bd78a6bf43e9, type: 3}
+  - {fileID: 21300000, guid: 21c0a0f6180524962874ce73021eed8a, type: 3}
+  - {fileID: 21300000, guid: dad0e9a81080c40618664c8237cb4862, type: 3}
+  - {fileID: 21300000, guid: 700764c8fde8c45dea3211f5fdb027a4, type: 3}
+  - {fileID: 21300000, guid: eba05279974524c50bfb6981e1e80e27, type: 3}
+  - {fileID: 21300000, guid: b41ab61ab1d134a12bd2a192d005ae5a, type: 3}
+  - {fileID: 21300000, guid: 540bae1aa1d454074994be39e3b62b0a, type: 3}
+  - {fileID: 21300000, guid: 28723cfa497a84da8879a7b9cb15b5d1, type: 3}
+  - {fileID: 21300000, guid: ac93638b72dda45b294f0c1b904725b3, type: 3}
+  - {fileID: 21300000, guid: 17e5658bc0d264a22836a979358c99e4, type: 3}
+  - {fileID: 21300000, guid: e66de59bd7b864d44b31f72b046a9617, type: 3}
+  - {fileID: 21300000, guid: 08d2a60c97177461493cac9275163c09, type: 3}
+  - {fileID: 21300000, guid: c9274a2ce61a64de5a938ea71630c752, type: 3}
+  - {fileID: 21300000, guid: a56af6bc9e2c1498a9cb430062281e14, type: 3}
+  - {fileID: 21300000, guid: 012f2cdcdf7244238be562ceeff86006, type: 3}
+  - {fileID: 21300000, guid: 950710fc25698408e96701844bce4298, type: 3}
+  - {fileID: 21300000, guid: ea669e4d22c934e0da5824a26d2ed115, type: 3}
+  - {fileID: 21300000, guid: 6a647a5df0c4c409bac064bdb4c01121, type: 3}
+  - {fileID: 21300000, guid: 5903831ea584d41e59dff010466a8f69, type: 3}
+  - {fileID: 21300000, guid: d980bcee8af2044188259c221d283cc9, type: 3}
+  - {fileID: 21300000, guid: 00bf544f78acf47aa8269f26e8e0a3a7, type: 3}
+  - {fileID: 21300000, guid: d3fd5bef321f340948afc41a1277d9a8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Section 5
+  - Head Frame
+  - Section 4
+  - Section 2 Glass
+  - Section 3
+  - Fill Bar
+  - Tick
+  - Section 4 Glass
+  - UI Frame Thin No Title
+  - Temp Alignment Circles
+  - UI Text
+  - Notification Box Right
+  - Close Button
+  - Section 7
+  - Overlay-1px
+  - Section 8 Glass
+  - Section 7 Glass
+  - Section 1 Glass
+  - Character Selection Frame
+  - UI Resize
+  - Section 8
+  - Section 1
+  - Layer 2
+  - Cross
+  - Section 6
+  - UI Frame No Title
+  - Section 3 Glass
+  - Section 5 Glass
+  - test
+  - UI Frame
+  - Bar Frame
+  - Speech Bubble
+  - Section 6 Glass
+  - Section 2
+  m_Tag: UI
+  m_IsVariant: 0

@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TMP_Settings
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 2705215ac5b84b70bacc50632be6e391,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_enableWordWrapping
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_enableKerning
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_enableExtraPadding
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_enableTintAllSprites
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_enableParseEscapeCharacters
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EnableRaycastTarget
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GetFontFeaturesAtRuntime
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_missingGlyphCharacter
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_warningsDisabled
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultFontAsset
+    value: 
+    objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_defaultFontAssetPath
+    value: Fonts & Materials/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultFontSize
+    value: 36
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultAutoSizeMinRatio
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultAutoSizeMaxRatio
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultTextMeshProTextContainerSize.x
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultTextMeshProTextContainerSize.y
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultTextMeshProUITextContainerSize.x
+    value: 200
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultTextMeshProUITextContainerSize.y
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_autoSizeTextContainer
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_fallbackFontAssets.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_matchMaterialPreset
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultSpriteAsset
+    value: 
+    objectReference: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_defaultSpriteAssetPath
+    value: Sprite Assets/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultColorGradientPresetsPath
+    value: Color Gradient Presets/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_enableEmojiSupport
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_defaultStyleSheet
+    value: 
+    objectReference: {fileID: 11400000, guid: f952c082cb03451daed3ee968ac6c63e, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_leadingCharacters
+    value: 
+    objectReference: {fileID: 4900000, guid: d82c1b31c7e74239bff1220585707d2b, type: 3}
+  - target: {fileID: 0}
+    propertyPath: m_followingCharacters
+    value: 
+    objectReference: {fileID: 4900000, guid: fade42e8bc714b018fac513c043d323b, type: 3}
