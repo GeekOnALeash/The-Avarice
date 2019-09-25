@@ -3,20 +3,21 @@
     "com.mambojambostudios.unity-atoms": "https://github.com/AdamRamberg/unity-atoms.git#canary",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
-    "com.unity.analytics": "3.3.2",
     "com.unity.ext.nunit": "1.0.0",
-    "com.unity.ide.rider": "1.1.0",
+    "com.unity.ide.rider": "1.1.1",
+    "com.unity.ide.vscode": "1.0.7",
     "com.unity.mathematics": "1.1.0",
-    "com.unity.progrids": "3.0.3-preview.4",
     "com.unity.render-pipelines.universal": "7.0.1",
-    "com.unity.test-framework": "1.1.2",
-    "com.unity.timeline": "1.2.2",
+    "com.unity.test-framework": "1.1.3",
+    "com.unity.timeline": "1.2.1",
     "com.unity.ugui": "1.0.0",
+    "com.vladfaust.unitywakatime": "https://github.com/vladfaust/unity-wakatime.git#package",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
     "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.cloth": "1.0.0",
     "com.unity.modules.director": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0",
     "com.unity.modules.imgui": "1.0.0",
@@ -25,6 +26,8 @@
     "com.unity.modules.physics": "1.0.0",
     "com.unity.modules.physics2d": "1.0.0",
     "com.unity.modules.screencapture": "1.0.0",
+    "com.unity.modules.terrain": "1.0.0",
+    "com.unity.modules.terrainphysics": "1.0.0",
     "com.unity.modules.tilemap": "1.0.0",
     "com.unity.modules.ui": "1.0.0",
     "com.unity.modules.uielements": "1.0.0",
@@ -44,7 +47,11 @@
   "lock": {
     "com.mambojambostudios.unity-atoms": {
       "revision": "canary",
-      "hash": "a7fb08c5e3f6db552af40115ab0bf342976ee40b"
+      "hash": "4fe979be256d9c6a67a47ced7f35bc237179fb55"
+    },
+    "com.vladfaust.unitywakatime": {
+      "revision": "package",
+      "hash": "b8a1d9f726608a3517fade7d045c7c629a57c302"
     }
   }
 }
