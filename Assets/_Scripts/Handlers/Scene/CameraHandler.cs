@@ -46,17 +46,12 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 			FollowTarget();
 		}
 
-#if UNITY_EDITOR
 		private void FixedUpdate()
 		{
-			if (!Application.isPlaying)
-			{
-				FollowTarget();
-			}
+			FollowTarget();
 		}
-#endif
 
-		internal void FollowTarget()
+		private void FollowTarget()
 		{
 			// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
 			var position = _followTargetObject.transform.position;

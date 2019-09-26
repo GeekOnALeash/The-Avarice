@@ -1,5 +1,3 @@
-using com.ArkAngelApps.UtilityLibraries.Attributes;
-using Unity.Mathematics;
 using UnityAtoms;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -12,17 +10,13 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 	{
 		public FloatReference moveSpeed;
 
-		[Header("Read only info fields")]
-		[ReadOnly]
-		public bool isMoving;
+		internal bool isMoving;
 
-		[ReadOnly] public float horizontal;
-
-		[ReadOnly] public float vertical;
+		protected Vector2 moveAxis;
 
 		protected bool movementEnabled = true;
-		protected float2 movement;
-		protected float2 pos;
+		protected Vector2 movement;
+		protected Vector2 pos;
 		protected Rigidbody2D rb2D;
 
 		protected virtual void Start()
@@ -32,7 +26,7 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 			Assert.IsNotNull(moveSpeed, "moveSpeed is null");
 		}
 
-		protected void FixedUpdate()
+		protected virtual void FixedUpdate()
 		{
 			if (isMoving)
 			{

@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4913339097327961992, guid: b334c002655bb4c4c9589e7dd1974796,
-        type: 3}
-      propertyPath: layers.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 4170271676974525134, guid: b334c002655bb4c4c9589e7dd1974796,
         type: 3}
       propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.size
@@ -53,6 +48,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913339097327961992, guid: b334c002655bb4c4c9589e7dd1974796,
+        type: 3}
+      propertyPath: layers.m_Bits
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 4170271676974525129, guid: b334c002655bb4c4c9589e7dd1974796,
         type: 3}

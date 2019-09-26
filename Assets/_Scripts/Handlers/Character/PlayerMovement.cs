@@ -1,71 +1,53 @@
 ﻿using com.ArkAngelApps.TheAvarice.Behaviours;
-using com.ArkAngelApps.TheAvarice.Interfaces;
-using com.ArkAngelApps.TheAvarice.Scriptable.System;
-using com.ArkAngelApps.UtilityLibraries.Extensions;
+using com.ArkAngelApps.TheAvarice.InputSystem;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 {
-	public sealed class PlayerMovement : Movable, IMovement
+	public sealed class PlayerMovement : Movable, GameInputActions.IPlayerActions
 	{
-		private void Update()
+		private GameInputActions _gameInputActions;
+		private InputAction _inputAction;
+
+		private void Awake()
 		{
-			if (!movementEnabled)
-			{
-				return;
-			}
-
-			if (!SystemVariables.Instance.keybinds)
-			{
-				return;
-			}
-
-			if (SystemVariables.Instance.keybinds.Left())
-			{
-				horizontal = -1.0f;
-			} else if (SystemVariables.Instance.keybinds.Right())
-			{
-				horizontal = 1.0f;
-			} else
-			{
-				horizontal = 0.0f;
-			}
-
-			if (SystemVariables.Instance.keybinds.Up())
-			{
-				vertical = 1.0f;
-			} else if (SystemVariables.Instance.keybinds.Down())
-			{
-				vertical = -1.0f;
-			} else
-			{
-				vertical = 0.0f;
-			}
-
-			isMoving = !horizontal.IsEqual(0.0f) || !vertical.IsEqual(0.0f);
+			_gameInputActions = new GameInputActions();
 		}
 
-		private void LateUpdate()
+		private void OnEnable()
 		{
-			if (isMoving)
-			{
-				SystemVariables.Instance.mainCamera.FollowTarget();
-			}
+			_inputAction = _gameInputActions.Player.Move;
+			_inputAction.started += OnMove;
+			_inputAction.performed += OnMove;
+			_inputAction.canceled += OnMove;
+			_gameInputActions.Enable();
+		}
+
+		private void OnDisable()
+		{
+			_inputAction = _gameInputActions.Player.Move;
+			_inputAction.started -= OnMove;
+			_inputAction.performed -= OnMove;
+			_inputAction.canceled -= OnMove;
+			_gameInputActions.Disable();
 		}
 
 		[Il2CppSetOption(Option.NullChecks, false)]
 		public override void DoMovement()
 		{
-			if (!rb2D || (!moveSpeed.UseConstant && moveSpeed.Variable == null))
+			if (!rb2D || !moveSpeed.UseConstant && moveSpeed.Variable == null)
 			{
 				return;
 			}
 
-			movement.x = horizontal;
-			movement.y = vertical;
+			if (!isMoving)
+			{
+				return;
+			}
 
-			movement = moveSpeed.Value * Time.deltaTime * movement;
+			movement = moveSpeed.Value * Time.deltaTime * moveAxis;
 
 			var position = transform.position;
 			pos.x = position.x;
@@ -73,5 +55,17 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 
 			rb2D.MovePosition(pos + movement);
 		}
+
+		[Il2CppSetOption(Option.NullChecks, false)]
+		public void OnMove(InputAction.CallbackContext context)
+		{
+			moveAxis = context.ReadValue<Vector2>();
+
+			isMoving = moveAxis != Vector2.zero;
+		}
+
+		public void OnLook(InputAction.CallbackContext context) { }
+
+		public void OnFire(InputAction.CallbackContext context) { }
 	}
 }

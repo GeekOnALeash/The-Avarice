@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1369570552839350164}
   - component: {fileID: 1369570552839350167}
   - component: {fileID: 3458712214961539534}
-  - component: {fileID: 2671851419589494305}
   - component: {fileID: 5378320606571813025}
   - component: {fileID: 6904702694653156463}
   m_Layer: 0
@@ -102,19 +101,6 @@ MonoBehaviour:
     cachedScene: {fileID: 0}
   cameraZ: -10
   background: {fileID: 0}
---- !u!114 &2671851419589494305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369570552839350169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ec1b24f5cf946dd9d03bbdc25dc643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventAndResponse: []
 --- !u!114 &5378320606571813025
 MonoBehaviour:
   m_ObjectHideFlags: 0
