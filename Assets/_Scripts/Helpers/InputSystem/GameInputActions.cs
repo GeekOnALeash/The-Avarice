@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace com.ArkAngelApps.TheAvarice.InputSystem
+namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
 {
     public class GameInputActions : IInputActionCollection
     {
@@ -28,34 +28,23 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""1b68d799-ee17-4f02-bbbd-14b031201552"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Fire"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""6bd87fed-10b8-443a-b17c-68b467ea3b5d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Start Conversation"",
+                    ""type"": ""Button"",
+                    ""id"": ""3d824b8f-c72c-4013-80a2-70e1dd6fffc3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""978bfe49-cc26-4a3d-ab7b-7d7a29327403"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""WASD"",
                     ""id"": ""00ca640b-d935-4593-8157-c05846ea39b3"",
@@ -168,67 +157,34 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
+                    ""id"": ""b18e6a53-12ce-4206-a304-daddc5b064ed"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Look"",
+                    ""groups"": ""Keyboard&Mouse;Gamepad"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
-                    ""path"": ""<Pointer>/delta"",
-                    ""interactions"": """",
+                    ""id"": ""a1c9dbb5-1b1c-4401-8222-b22c4f30bdf1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse;Touch"",
-                    ""action"": ""Look"",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""143bb1cd-cc10-4eca-a2f0-a3664166fe91"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""id"": ""095ff44f-8800-42b5-9473-f379238dc6e9"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""886e731e-7071-4ae4-95c0-e61739dad6fd"",
-                    ""path"": ""<Touchscreen>/tap"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Touch"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ee3d0cd2-254e-47a7-a8cb-bc94d9658c54"",
-                    ""path"": ""<Joystick>/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Fire"",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Start Conversation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -650,8 +606,8 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
             // Player
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-            m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
-            m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+            m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+            m_Player_StartConversation = m_Player.FindAction("Start Conversation", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -715,15 +671,15 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
         private readonly InputActionMap m_Player;
         private IPlayerActions m_PlayerActionsCallbackInterface;
         private readonly InputAction m_Player_Move;
-        private readonly InputAction m_Player_Look;
-        private readonly InputAction m_Player_Fire;
+        private readonly InputAction m_Player_Interact;
+        private readonly InputAction m_Player_StartConversation;
         public struct PlayerActions
         {
             private GameInputActions m_Wrapper;
             public PlayerActions(GameInputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Player_Move;
-            public InputAction @Look => m_Wrapper.m_Player_Look;
-            public InputAction @Fire => m_Wrapper.m_Player_Fire;
+            public InputAction @Interact => m_Wrapper.m_Player_Interact;
+            public InputAction @StartConversation => m_Wrapper.m_Player_StartConversation;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -736,12 +692,12 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
                     Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                     Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                     Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
-                    Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                    Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                    Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                    Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                    Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                    Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                    Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    StartConversation.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStartConversation;
+                    StartConversation.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStartConversation;
+                    StartConversation.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStartConversation;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -749,12 +705,12 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
                     Move.started += instance.OnMove;
                     Move.performed += instance.OnMove;
                     Move.canceled += instance.OnMove;
-                    Look.started += instance.OnLook;
-                    Look.performed += instance.OnLook;
-                    Look.canceled += instance.OnLook;
-                    Fire.started += instance.OnFire;
-                    Fire.performed += instance.OnFire;
-                    Fire.canceled += instance.OnFire;
+                    Interact.started += instance.OnInteract;
+                    Interact.performed += instance.OnInteract;
+                    Interact.canceled += instance.OnInteract;
+                    StartConversation.started += instance.OnStartConversation;
+                    StartConversation.performed += instance.OnStartConversation;
+                    StartConversation.canceled += instance.OnStartConversation;
                 }
             }
         }
@@ -911,8 +867,8 @@ namespace com.ArkAngelApps.TheAvarice.InputSystem
         public interface IPlayerActions
         {
             void OnMove(InputAction.CallbackContext context);
-            void OnLook(InputAction.CallbackContext context);
-            void OnFire(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
+            void OnStartConversation(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

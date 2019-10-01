@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Prefs
 {

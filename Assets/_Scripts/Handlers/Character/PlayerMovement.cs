@@ -1,37 +1,24 @@
 ﻿using com.ArkAngelApps.TheAvarice.Behaviours;
-using com.ArkAngelApps.TheAvarice.InputSystem;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 {
-	public sealed class PlayerMovement : Movable, GameInputActions.IPlayerActions
+	public sealed class PlayerMovement : Movable
 	{
-		private GameInputActions _gameInputActions;
-		private InputAction _inputAction;
-
-		private void Awake()
-		{
-			_gameInputActions = new GameInputActions();
-		}
+		private InputManager _input;
 
 		private void OnEnable()
 		{
-			_inputAction = _gameInputActions.Player.Move;
-			_inputAction.started += OnMove;
-			_inputAction.performed += OnMove;
-			_inputAction.canceled += OnMove;
-			_gameInputActions.Enable();
+			_input = new InputManager("Move", started: OnMove, performed: OnMove, canceled: OnMove);
+			_input.Enable();
 		}
 
 		private void OnDisable()
 		{
-			_inputAction = _gameInputActions.Player.Move;
-			_inputAction.started -= OnMove;
-			_inputAction.performed -= OnMove;
-			_inputAction.canceled -= OnMove;
-			_gameInputActions.Disable();
+			_input.Disable();
 		}
 
 		[Il2CppSetOption(Option.NullChecks, false)]
@@ -57,15 +44,11 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		}
 
 		[Il2CppSetOption(Option.NullChecks, false)]
-		public void OnMove(InputAction.CallbackContext context)
+		private void OnMove(InputAction.CallbackContext ctx)
 		{
-			moveAxis = context.ReadValue<Vector2>();
+			moveAxis = ctx.ReadValue<Vector2>();
 
 			isMoving = moveAxis != Vector2.zero;
 		}
-
-		public void OnLook(InputAction.CallbackContext context) { }
-
-		public void OnFire(InputAction.CallbackContext context) { }
 	}
 }

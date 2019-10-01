@@ -1,14 +1,17 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
 using com.ArkAngelApps.TheAvarice.Managers;
 using com.ArkAngelApps.TheAvarice.Scriptable.System;
 using Fungus;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 {
 	public sealed class DialogueHandler : MonoBehaviour
 	{
-		private bool _withinDialogueTrigger;
+		private bool _withinTrigger;
 		public string dialogBlockName;
 		public int diaologBlockID = 1;
 		private string _dialogBlock;
@@ -16,6 +19,19 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		private bool _dialogueDisplayed;
 
 		[SerializeField] private Flowchart flowchart;
+
+		private InputManager _input;
+
+		private void OnEnable()
+		{
+			_input = new InputManager("Start Conversation", performed: OnStartConversation);
+			_input.Enable();
+		}
+
+		public void OnDisable()
+		{
+			_input.Disable();
+		}
 
 		private void Start()
 		{
@@ -27,16 +43,26 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		[SuppressMessage("ReSharper", "InvertIf")]
 		private void LateUpdate()
 		{
-			if (_withinDialogueTrigger)
+			if (_withinTrigger)
 			{
+				_input.Enable();
 				_dialogueDisplayed = GetBool("dialogueDisplayed");
-				if (SystemVariables.Instance.keybinds.Interact() && !_dialogueDisplayed)
-				{
-					if (FindBlock())
-					{
-						CallBlock();
-					}
-				}
+			} else
+			{
+				_input.Disable();
+			}
+		}
+
+		private void OnStartConversation(InputAction.CallbackContext ctx)
+		{
+			if (_dialogueDisplayed)
+			{
+				return;
+			}
+
+			if (FindBlock())
+			{
+				CallBlock();
 			}
 		}
 
@@ -69,12 +95,12 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 
 		public void TriggerEnter()
 		{
-			_withinDialogueTrigger = true;
+			_withinTrigger = true;
 		}
 
 		public void TriggerExit()
 		{
-			_withinDialogueTrigger = false;
+			_withinTrigger = false;
 		}
 
 		public bool DialogueDisplayed() => _dialogueDisplayed;

@@ -15,7 +15,7 @@ namespace com.ArkAngelApps.TheAvarice.SimpleSpriteAnimator
 
 		protected SpriteAnimationHelper spriteAnimationHelper;
 
-		protected SpriteAnimationState state = SpriteAnimationState.Playing;
+		protected SpriteAnimationState state = SpriteAnimationState.Stopped;
 
 		private void Awake()
 		{
@@ -37,9 +37,11 @@ namespace com.ArkAngelApps.TheAvarice.SimpleSpriteAnimator
 			}
 		}
 
+
+
 		public abstract void Play();
 
-		protected void Play([CanBeNull] SpriteAnimation spriteAnimation)
+		public void Play([CanBeNull] SpriteAnimation spriteAnimation)
 		{
 			if (ReferenceEquals(spriteAnimation, null))
 			{

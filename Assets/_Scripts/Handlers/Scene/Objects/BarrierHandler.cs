@@ -44,7 +44,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 
 		private Animator _barrierAnimation;
 
-		protected bool withinProximity;
+		protected bool withinTrigger;
 		private static readonly int __OpenBarrier = Animator.StringToHash("OpenBarrier");
 
 		internal new Collider2D collider;
@@ -53,7 +53,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 		// ReSharper disable once InconsistentNaming
 		internal BarrierInteractionType _barrierInteractionType;
 
-		private void Awake()
+		public virtual void Awake()
 		{
 			switch (interactionType)
 			{

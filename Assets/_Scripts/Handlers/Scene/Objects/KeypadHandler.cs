@@ -1,6 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
 using com.ArkAngelApps.TheAvarice.Controllers;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
+using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
 using com.ArkAngelApps.TheAvarice.Scriptable.System;
+using Unity.IL2CPP.CompilerServices;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 {
@@ -11,15 +15,36 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 		private bool _keypadDisplayed;
 		private bool _codeCorrect;
 
-		[SuppressMessage("ReSharper", "InvertIf")]
-		private void Update()
+		private InputManager _input;
+
+		public void OnEnable()
+		{
+			_input = new InputManager("Interact", performed: OnInteract);
+			_input.Enable();
+		}
+
+		public void OnDisable()
+		{
+			_input.Disable();
+		}
+
+		private void LateUpdate()
 		{
 			if (withinTrigger)
 			{
-				if (SystemVariables.Instance.keybinds.Interact())
-				{
-					DisplayKeypad();
-				}
+				_input.Enable();
+			} else
+			{
+				_input.Disable();
+			}
+		}
+
+		[Il2CppSetOption(Option.NullChecks, false)]
+		private void OnInteract(InputAction.CallbackContext ctx)
+		{
+			if (withinTrigger)
+			{
+				DisplayKeypad();
 			}
 		}
 

@@ -12,7 +12,7 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 
 		internal bool isMoving;
 
-		protected Vector2 moveAxis;
+		internal Vector2 moveAxis;
 
 		protected bool movementEnabled = true;
 		protected Vector2 movement;
@@ -36,12 +36,12 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 
 		public abstract void DoMovement();
 
-		public void DisableMovement()
+		public virtual void DisableMovement()
 		{
 			movementEnabled = false;
 		}
 
-		public void EnableMovement()
+		public virtual void EnableMovement()
 		{
 			movementEnabled = true;
 		}
