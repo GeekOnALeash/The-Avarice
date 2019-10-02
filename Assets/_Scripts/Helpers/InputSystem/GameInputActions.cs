@@ -181,7 +181,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
                     ""name"": """",
                     ""id"": ""095ff44f-8800-42b5-9473-f379238dc6e9"",
                     ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Start Conversation"",
