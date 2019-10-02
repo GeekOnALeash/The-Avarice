@@ -2,5 +2,5 @@ component_depth: 1
 languages:
 - C#
 exclude:
-- /Assets/Asset\ Store/.*
-- /Assets/Tilemap\ Extras/.*
+- Assets/Asset Store
+- Assets/Tilemap Extras
