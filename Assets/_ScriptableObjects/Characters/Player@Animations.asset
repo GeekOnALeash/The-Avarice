@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idle:
   - {fileID: 11400000, guid: d5cd420c0290d4b4eba1c04667752540, type: 2}
+  - {fileID: 11400000, guid: 93fe58919b3e24364860add6ba4d8261, type: 2}
   walkRight: {fileID: 11400000, guid: f18297f404b1645f986cb400f15eed79, type: 2}
   walkLeft: {fileID: 11400000, guid: fa1ad53c6d85545a8aa9405615fe36bf, type: 2}
   walkUp: {fileID: 11400000, guid: 0045ebb7c06334c3c81ca26f80c16dda, type: 2}

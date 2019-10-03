@@ -195,6 +195,8 @@ MonoBehaviour:
   m_UseNormalMap: 1
   m_LightOrder: 10
   m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 1

@@ -143,9 +143,6 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  isMoving: 0
-  horizontal: 0
-  vertical: 0
   target: {fileID: 0}
   minDistance: 0
   maxDistance: 10

@@ -1,5 +1,3 @@
-using System;
-using System.Diagnostics.CodeAnalysis;
 using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
 using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
 using com.ArkAngelApps.TheAvarice.Scriptable.System;
