@@ -1,9 +1,9 @@
-using System.Diagnostics.CodeAnalysis;
 using com.ArkAngelApps.TheAvarice.Controllers;
 using com.ArkAngelApps.TheAvarice.Helpers;
-using com.ArkAngelApps.TheAvarice.Scriptable.System;
-using com.ArkAngelApps.UtilityLibraries.Extensions;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
+using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.UI
 {
@@ -12,30 +12,39 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI
 		[SerializeField] private Overlay overlay;
 		[SerializeField] private PauseMenuHandler pauseMenu;
 		private bool _overlayShown;
+		private InputManager _input;
 
-		[SuppressMessage("ReSharper", "InvertIf")]
-		private void Update()
+		private void OnEnable()
 		{
-			if (SystemVariables.Instance.keybinds.Pause())
+			_input = new InputManager("Escape", started: OnEscape, performed: OnEscape, canceled: OnEscape);
+			_input.Enable();
+		}
+
+		private void OnDisable()
+		{
+			_input.Disable();
+		}
+
+		[Il2CppSetOption(Option.NullChecks, false)]
+		private void OnEscape(InputAction.CallbackContext ctx)
+		{
+			if (Controller.UI.window.AreWindowsDisplayed() && !GameController.isPaused)
 			{
-				if (Controller.UI.window.AreWindowsDisplayed() && !GameController.isPaused)
-				{
-					// If windows are displayed close top most window and return false.
-					Controller.UI.window.CloseNearestWindow();
-				}
-
-				if (!_overlayShown)
-				{
-					overlay.SetAlpha(FadeType.In);
-					_overlayShown = true;
-				} else
-				{
-					overlay.SetAlpha(FadeType.Out);
-					_overlayShown = false;
-				}
-
-				pauseMenu.gameObject.ToggleActive();
+				// If windows are displayed close top most window and return false.
+				Controller.UI.window.CloseNearestWindow();
 			}
+
+			if (!_overlayShown)
+			{
+				overlay.SetAlpha(FadeType.In);
+				_overlayShown = true;
+			} else
+			{
+				overlay.SetAlpha(FadeType.Out);
+				_overlayShown = false;
+			}
+
+			pauseMenu.gameObject.SetActive(!pauseMenu.gameObject.activeSelf);
 		}
 	}
 }

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bbc2c1e63e98543830eec78d976795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializedGuid: 0e3808a0763f674cb2f3f325d0389243
+  serializedGuid: 742afccc33b51644b08230ab09644240
 --- !u!50 &1464536651453876426
 Rigidbody2D:
   serializedVersion: 4
@@ -447,17 +447,6 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  isMoving: 0
-  horizontal: 0
-  vertical: 0
-  inputAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
 --- !u!1 &5438395287079378789
 GameObject:
   m_ObjectHideFlags: 0

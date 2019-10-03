@@ -75,7 +75,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Prefs
 		public InputBind pause = new InputBind("Pause Key",
 		                                       InputType.Keyboard,
 		                                       KeyCode.Escape,
-		                                       InputPressType.Both);
+		                                       InputPressType.Down);
 
 		internal Dictionary<InputCommands, string> commandToKeyDictionary;
 

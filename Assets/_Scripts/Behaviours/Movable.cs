@@ -12,7 +12,7 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 
 		internal bool isMoving;
 
-		internal Vector2 moveAxis;
+		public Vector2Variable moveAxis;
 
 		protected bool movementEnabled = true;
 		protected Vector2 movement;
@@ -24,6 +24,11 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 			rb2D = GetComponent<Rigidbody2D>();
 			Assert.IsNotNull(rb2D, "_rb2D is null");
 			Assert.IsNotNull(moveSpeed, "moveSpeed is null");
+
+			if (moveAxis == null)
+			{
+				moveAxis = ScriptableObject.CreateInstance<Vector2Variable>();
+			}
 		}
 
 		protected virtual void FixedUpdate()

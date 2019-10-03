@@ -1,28 +1,100 @@
-﻿using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
+﻿using System;
+using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
 using com.ArkAngelApps.TheAvarice.SimpleSpriteAnimator;
-using JetBrains.Annotations;
-using NotImplementedException = System.NotImplementedException;
+using com.ArkAngelApps.UtilityLibraries.Extensions;
+using UnityAtoms;
+using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 {
-	public class CharacterAnimation : SpriteAnimatorBase
+	[RequireComponent(typeof(SpriteRenderer))]
+	[RequireComponent(typeof(Animator))]
+	public class CharacterAnimation : MonoBehaviour
 	{
-		public CharacterAnimations anims;
+		[SerializeField] private Vector2Variable moveAxis;
 
-		public void Start()
+		[SerializeField] private CharacterAnimations characterAnimations;
+
+		private SpriteAnimation _currentAnim;
+		private SpriteRenderer _spriteRenderer;
+		private Animator _animator;
+
+		private int _frameID;
+		private int _lastFrameID;
+		private static readonly int __Horizontal = Animator.StringToHash("horizontal");
+
+		public enum Direction
 		{
-			if (playAutomatically)
-			{
-				Play(GetDefaultIdle());
-			}
+			Idle,
+			Left,
+			Right,
+			Up,
+			Down
 		}
 
-		[CanBeNull]
-		public SpriteAnimation GetDefaultIdle() => anims.idle.Length > 0 ? anims.idle[0] : null;
-
-		public override void Play()
+		private void Start()
 		{
-			throw new NotImplementedException();
+			_spriteRenderer = GetComponent<SpriteRenderer>();
+			_animator = GetComponent<Animator>();
+		}
+
+		private void LateUpdate()
+		{
+			_animator.SetFloat(__Horizontal, moveAxis.Value.x);
+		}
+
+		public void SetAnimation(Direction direction)
+		{
+			_frameID = 0;
+
+			switch (direction)
+			{
+				case Direction.Idle:
+					_currentAnim = characterAnimations.idle.RandomItem();
+					break;
+				case Direction.Left:
+					_currentAnim = characterAnimations.walkLeft;
+					break;
+				case Direction.Right:
+					break;
+				case Direction.Up:
+					break;
+				case Direction.Down:
+					break;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			}
+
+			_lastFrameID = _currentAnim.Frames.Count - 1;
+		}
+
+		public void GetNextFrame()
+		{
+			_frameID += 1;
+
+			if (_frameID > _lastFrameID)
+			{
+				return;
+			}
+
+			SetAnimationFrameToRenderer(_frameID);
+		}
+
+		public void SetAnimationFrameToRenderer(int id)
+		{
+			if (_currentAnim == null)
+			{
+				Debug.Log($"{nameof(_currentAnim)} needs to be set within animation event before calling for frame.");
+				return;
+			}
+
+			if (_currentAnim.Frames.Count < id)
+			{
+				Debug.Log($"{nameof(id)} is out of range for animation frame.");
+				return;
+			}
+
+			_spriteRenderer.sprite = _currentAnim.Frames[id].Sprite;
 		}
 	}
 }

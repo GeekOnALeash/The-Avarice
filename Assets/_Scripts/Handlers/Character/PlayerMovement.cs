@@ -34,7 +34,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 				return;
 			}
 
-			movement = moveSpeed.Value * Time.deltaTime * moveAxis;
+			movement = moveSpeed.Value * Time.deltaTime * moveAxis.Value;
 
 			var position = transform.position;
 			pos.x = position.x;
@@ -46,9 +46,9 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		[Il2CppSetOption(Option.NullChecks, false)]
 		private void OnMove(InputAction.CallbackContext ctx)
 		{
-			moveAxis = ctx.ReadValue<Vector2>();
+			moveAxis.Value = ctx.ReadValue<Vector2>();
 
-			isMoving = moveAxis != Vector2.zero;
+			isMoving = moveAxis.Value != Vector2.zero;
 		}
 	}
 }

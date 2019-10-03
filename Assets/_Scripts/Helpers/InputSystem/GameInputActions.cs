@@ -42,6 +42,14 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""00a5d34c-51db-42b2-a47b-570d710e7f1f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -185,6 +193,17 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Start Conversation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50d2261b-03ef-4df7-aa87-ff6f619deb2e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -608,6 +627,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_StartConversation = m_Player.FindAction("Start Conversation", throwIfNotFound: true);
+            m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -673,6 +693,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_StartConversation;
+        private readonly InputAction m_Player_Escape;
         public struct PlayerActions
         {
             private GameInputActions m_Wrapper;
@@ -680,6 +701,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputAction @StartConversation => m_Wrapper.m_Player_StartConversation;
+            public InputAction @Escape => m_Wrapper.m_Player_Escape;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -698,6 +720,9 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
                     StartConversation.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStartConversation;
                     StartConversation.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStartConversation;
                     StartConversation.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStartConversation;
+                    Escape.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
+                    Escape.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
+                    Escape.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -711,6 +736,9 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
                     StartConversation.started += instance.OnStartConversation;
                     StartConversation.performed += instance.OnStartConversation;
                     StartConversation.canceled += instance.OnStartConversation;
+                    Escape.started += instance.OnEscape;
+                    Escape.performed += instance.OnEscape;
+                    Escape.canceled += instance.OnEscape;
                 }
             }
         }
@@ -869,6 +897,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
             void OnMove(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnStartConversation(InputAction.CallbackContext context);
+            void OnEscape(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
