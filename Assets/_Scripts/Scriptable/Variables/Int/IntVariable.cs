@@ -1,5 +1,4 @@
-﻿using com.ArkAngelApps.TheAvarice.Scriptable.Interfaces;
-using UnityAtoms;
+﻿using UnityAtoms;
 using UnityEngine;
 using NotImplementedException = System.NotImplementedException;
 
