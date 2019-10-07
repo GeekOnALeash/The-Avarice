@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.UtilityLibraries.Attributes;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.System
 {
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Animator))]
-	public class AnimationHandler : OverridableMonoBehaviour
+	public class AnimationHandler : CachedTransformBase
 	{
 		[Range(0, 60)]
 		public int secondsBetweenIdles = 5;
@@ -25,10 +26,8 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.System
 
 		internal static readonly int _RandomID = Animator.StringToHash("RandomID");
 
-		protected override void Awake()
+		private void Awake()
 		{
-			base.Awake();
-
 			animator = GetComponent<Animator>();
 			Assert.IsNotNull(animator, "animator is null");
 
