@@ -1,4 +1,4 @@
-using com.ArkAngelApps.TheAvarice.Behaviours;
+using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.TheAvarice.Scriptable.System;
 using JetBrains.Annotations;
 using Unity.Mathematics;
@@ -10,7 +10,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 	[ExecuteInEditMode]
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Camera))]
-	public sealed class CameraHandler : BaseBehaviour
+	public sealed class CameraHandler : CachedTransformBase
 	{
 		//Private variable to store the offset distance between the player and camera
 		[SerializeField] private float3 offset;
