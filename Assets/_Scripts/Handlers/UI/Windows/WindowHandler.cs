@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.TheAvarice.Controllers;
 using com.ArkAngelApps.UtilityLibraries.ENUMS;
 using com.ArkAngelApps.TheAvarice.Managers;
@@ -11,7 +12,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 	/// Parent class for all windows inheriting from this class to provide basic control of windows.
 	/// </summary>
 	[DisallowMultipleComponent]
-	public class WindowHandler : MonoBehaviour
+	public class WindowHandler : CachedTransformBase
 	{
 		public WindowType windowType; // Window Type that can be used by classes inheriting
 		public bool haltGamePlay;
@@ -19,22 +20,6 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 
 		private WindowManager _windowManager; // Direct link to manager used to control windows, which is under UI Controller.
 		private bool _hasStartRan; // Used to ensure that OnEnable and Start don't both try to create the same window.
-
-		private Transform _thisTransform;
-
-		// ReSharper disable once InconsistentNaming
-		private new Transform transform
-		{
-			get
-			{
-				if (_thisTransform == null)
-				{
-					_thisTransform = base.transform;
-				}
-
-				return _thisTransform;
-			}
-		}
 
 		[SuppressMessage("ReSharper", "InvertIf")]
 		protected virtual void Start()
