@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.TheAvarice.Behaviours.UI;
 using com.ArkAngelApps.TheAvarice.Controllers;
 using com.ArkAngelApps.TheAvarice.Helpers;

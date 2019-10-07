@@ -2,11 +2,27 @@
 
 namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
-	public sealed class ParticleSystemLoader : BaseBehaviour
+	public sealed class ParticleSystemLoader : MonoBehaviour
 	{
 		[SerializeField] internal GameObject particle;
 
 		private SpriteRenderer _spriteRenderer;
+
+		private Transform _thisTransform;
+
+		// ReSharper disable once InconsistentNaming
+		private new Transform transform
+		{
+			get
+			{
+				if (_thisTransform == null)
+				{
+					_thisTransform = base.transform;
+				}
+
+				return _thisTransform;
+			}
+		}
 
 		private void Awake()
 		{

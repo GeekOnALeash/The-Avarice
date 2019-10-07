@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.UtilityLibraries.Attributes;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
@@ -7,7 +6,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 {
 	[ExecuteInEditMode]
-	public sealed class LightHandler : CachedTransformBase
+	public sealed class LightHandler : OverridableMonoBehaviour
 	{
 		public Light2D lightObject;
 		public SpriteRenderer spriteRenderer;
@@ -29,8 +28,26 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 		private float _currentIntensity;
 		private bool _isSpriteRendererNotNull;
 
-		private void Awake()
+		private Transform _thisTransform;
+
+		// ReSharper disable once InconsistentNaming
+		internal new Transform transform
 		{
+			get
+			{
+				if (_thisTransform == null)
+				{
+					_thisTransform = base.transform;
+				}
+
+				return _thisTransform;
+			}
+		}
+
+		protected override void Awake()
+		{
+			base.Awake();
+
 			_isSpriteRendererNotNull = spriteRenderer != null;
 
 			_oldColor = lightObject.color;

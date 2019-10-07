@@ -8,7 +8,7 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(SpriteRenderer))]
-	public sealed class IsometricSpriteRenderer : BaseBehaviour
+	public sealed class IsometricSpriteRenderer : OverridableMonoBehaviour
 	{
 		private const int IsometricRangePerYUnit = -10;
 		private SpriteRenderer _spriteRenderer;
