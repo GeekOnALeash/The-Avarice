@@ -2,6 +2,7 @@
 using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
 using com.ArkAngelApps.TheAvarice.SimpleSpriteAnimator;
 using com.ArkAngelApps.UtilityLibraries.Extensions;
+using JetBrains.Annotations;
 using UnityAtoms;
 using UnityEngine;
 
@@ -22,6 +23,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		private int _frameID;
 		private int _lastFrameID;
 		private static readonly int __Horizontal = Animator.StringToHash("horizontal");
+		private static readonly int __Vertical = Animator.StringToHash("vertical");
 
 		public enum Direction
 		{
@@ -41,8 +43,10 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		private void LateUpdate()
 		{
 			_animator.SetFloat(__Horizontal, moveAxis.Value.x);
+			_animator.SetFloat(__Vertical, moveAxis.Value.y);
 		}
 
+		[UsedImplicitly]
 		public void SetAnimation(Direction direction)
 		{
 			_frameID = 0;
@@ -56,10 +60,13 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 					_currentAnim = characterAnimations.walkLeft;
 					break;
 				case Direction.Right:
+					_currentAnim = characterAnimations.walkRight;
 					break;
 				case Direction.Up:
+					_currentAnim = characterAnimations.walkUp;
 					break;
 				case Direction.Down:
+					_currentAnim = characterAnimations.walkDown;
 					break;
 				default:
 					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
@@ -68,6 +75,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 			_lastFrameID = _currentAnim.Frames.Count - 1;
 		}
 
+		[UsedImplicitly]
 		public void GetNextFrame()
 		{
 			_frameID += 1;
