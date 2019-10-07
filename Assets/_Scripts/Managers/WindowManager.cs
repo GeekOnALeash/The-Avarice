@@ -52,7 +52,7 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 			return nextIndex;
 		}
 
-		public void CloseWindow(int index)
+		internal void CloseWindow(int index)
 		{
 			var window = windowList.GetUsingIndex(index);
 
@@ -84,7 +84,7 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 			CloseWindow(0);
 		}
 
-		public void CloseNearestWindow()
+		internal void CloseNearestWindow()
 		{
 			CloseWindow(LastIndex());
 		}
@@ -126,7 +126,7 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 		/// Check if there is any windows displayed.
 		/// </summary>
 		/// <returns>True if windows displayed, false if not.</returns>
-		public bool AreWindowsDisplayed() => WindowCount() != 0;
+		internal bool AreWindowsDisplayed() => WindowCount() != 0;
 
 		/// <summary>
 		/// The amount of windows displayed
@@ -160,7 +160,7 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 			Instantiate(windowHandler.gameObject, dragableWindowArea.transform);
 		}
 
-		public void SortWindows(int currentIndex)
+		internal void SortWindows(int currentIndex)
 		{
 			if (!AreWindowsDisplayed())
 			{
@@ -178,11 +178,11 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 			UpdateAllIndices();
 		}
 
-		public void EnableKeypad(int code, KeypadHandler keypad)
+		internal void EnableKeypad(int code, ComputerTerminalHandler terminal)
 		{
 			OpenWindow(keypadWindow);
 			keypadWindow.keypadCode = code;
-			keypadWindow.calledBy = keypad;
+			keypadWindow.calledBy = terminal;
 		}
 	}
 }

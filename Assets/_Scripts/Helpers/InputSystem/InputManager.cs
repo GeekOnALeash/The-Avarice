@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
 {
-	internal sealed class InputManager
+	public sealed class InputManager
 	{
 		private readonly Action<InputAction.CallbackContext> _started;
 		private readonly Action<InputAction.CallbackContext> _performed;
