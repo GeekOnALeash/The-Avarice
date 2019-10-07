@@ -1,21 +1,46 @@
 using com.ArkAngelApps.TheAvarice.Controllers;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
 using com.ArkAngelApps.TheAvarice.Scriptable.UI;
 using JetBrains.Annotations;
+using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 {
-	public class ComputerTerminalHandler : MonoBehaviour
+	public sealed class ComputerTerminalHandler : MonoBehaviour
 	{
+		public int code;
 		public ContextMessageData contextMessage;
-
 		public UnityEvent onEnableEvent;
-		protected bool withinTrigger;
 
-		protected static void OnEvent([NotNull] UnityEvent unityEvent)
+		private bool _withinTrigger;
+
+		private bool _keypadDisplayed;
+		private bool _codeCorrect;
+		private InputManager _input;
+
+		public void OnEnable()
 		{
-			unityEvent.Invoke();
+			_input = new InputManager("Interact", performed: OnInteract);
+			_input.Enable();
+		}
+
+		public void OnDisable()
+		{
+			_input.Disable();
+		}
+
+		private void LateUpdate()
+		{
+			if (_withinTrigger)
+			{
+				_input.Enable();
+			} else
+			{
+				_input.Disable();
+			}
 		}
 
 		[UsedImplicitly]
@@ -26,15 +51,40 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 				return;
 			}
 
-			withinTrigger = true;
+			_withinTrigger = true;
 			Controller.UI.contextMessageUI.ShowMessage(contextMessage);
 		}
 
 		[UsedImplicitly]
 		public void TriggerExit()
 		{
-			withinTrigger = false;
+			_withinTrigger = false;
 			Controller.UI.contextMessageUI.HideMessage();
+		}
+
+		[Il2CppSetOption(Option.NullChecks, false)]
+		private void OnInteract(InputAction.CallbackContext ctx)
+		{
+			if (_withinTrigger)
+			{
+				DisplayKeypad();
+			}
+		}
+
+		private void DisplayKeypad()
+		{
+			if (_keypadDisplayed)
+			{
+				return;
+			}
+
+			Controller.UI.window.EnableKeypad(code, this);
+			_keypadDisplayed = true;
+		}
+
+		internal void CodeCorrect()
+		{
+			onEnableEvent.Invoke();
 		}
 	}
 }

@@ -8,15 +8,14 @@ using UnityEngine.UI;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 {
-	public class KeypadWindowHandler : WindowHandler
+	public sealed class KeypadWindowHandler : WindowHandler
 	{
 		public Text displayText;
 
 		internal int keypadCode;
-		internal KeypadHandler calledBy;
+		internal ComputerTerminalHandler calledBy;
 
 		private int _codeLength = 4;
-		private string _typedCode;
 		private string _textToDisplay;
 		private int _keysPressedCount;
 		private const string DisplayPadding = "_";
@@ -27,7 +26,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 		protected override void Start()
 		{
 			base.Start();
-			
+
 			ResetKeypad();
 			_animator = GetComponent<Animator>();
 			Assert.IsNotNull(_animator, "_animator is null");
@@ -41,12 +40,12 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 		private void PadDisplayWithDashes()
 		{
 			_textToDisplay = "";
-			
+
 			for (int i = 1; i <= _codeLength; i++)
 			{
 				_textToDisplay = $"{_textToDisplay}{DisplayPadding}";
 			}
-			
+
 			UpdateDisplay(_textToDisplay);
 		}
 
@@ -86,7 +85,6 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 		private void ResetKeypad()
 		{
 			PadDisplayWithDashes();
-			_typedCode = null;
 			_keysPressedCount = 0;
 		}
 
