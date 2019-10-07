@@ -1,4 +1,4 @@
-﻿using com.ArkAngelApps.TheAvarice.Behaviours;
+﻿using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.TheAvarice.Controllers;
 using com.ArkAngelApps.TheAvarice.Scriptable.Items;
 using com.ArkAngelApps.TheAvarice.Scriptable.UI;
@@ -9,7 +9,7 @@ using UnityEngine.Assertions;
 namespace com.ArkAngelApps.TheAvarice.Handlers.Items
 {
 	[DisallowMultipleComponent]
-	public sealed class ItemContainerHandler : BaseBehaviour
+	public sealed class ItemContainerHandler : CachedTransformBase
 	{
 		public ItemContainer itemContainer;
 		public ItemContainerRuntimeSet itemContainers;
