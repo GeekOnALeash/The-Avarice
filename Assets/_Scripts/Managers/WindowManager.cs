@@ -54,10 +54,10 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 
 		internal void CloseWindow(int index)
 		{
-			var window = windowList.GetUsingIndex(index);
+			var window = windowList.GetItemUsingIndex(index);
 
 			// Negative number used to indicate to the handler its removed.
-			windowList.GetUsingIndex(index).windowIndex = -1;
+			windowList.GetItemUsingIndex(index).WindowIndex = -1;
 			windowList.RemoveAt(index);
 
 			window.gameObject.SetActive(false);
@@ -98,7 +98,7 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 
 			foreach (var window in windowList.runtimeItems)
 			{
-				window.UpdateIndex(GetWindowIndex(window));
+				window.WindowIndex = GetWindowIndex(window);
 			}
 		}
 
@@ -172,7 +172,7 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 				throw new Exception("currentIndex is out of range");
 			}
 
-			var item = windowList.GetUsingIndex(currentIndex);
+			var item = windowList.GetItemUsingIndex(currentIndex);
 			windowList.RemoveAt(currentIndex);
 			windowList.Add(item);
 			UpdateAllIndices();

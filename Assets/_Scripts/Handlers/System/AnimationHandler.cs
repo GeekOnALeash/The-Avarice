@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using com.ArkAngelApps.TheAvarice.Abstracts;
 using com.ArkAngelApps.UtilityLibraries.Attributes;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -10,7 +9,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.System
 {
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Animator))]
-	public class AnimationHandler : CachedTransformBase
+	public class AnimationHandler : MonoBehaviour
 	{
 		[Range(0, 60)]
 		public int secondsBetweenIdles = 5;

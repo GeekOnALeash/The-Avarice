@@ -47,11 +47,11 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Sets
 			}
 		}
 
-		internal T GetUsingIndex(int index) => runtimeItems[index];
+		internal T GetItemUsingIndex(int index) => runtimeItems[index];
 
-		internal T GetFirstItem() => GetUsingIndex(0);
+		internal T GetFirstItem() => GetItemUsingIndex(0);
 
-		internal T GetLastItem() => GetUsingIndex(LastIndex);
+		internal T GetLastItem() => GetItemUsingIndex(LastIndex);
 
 		public void OnBeforeSerialize() { }
 
