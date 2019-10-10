@@ -1,6 +1,4 @@
 ﻿namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 {
-	public class InfoWindowHandler : WindowHandler
-	{
-	}
+	public sealed class InfoWindowHandler : WindowHandler { }
 }

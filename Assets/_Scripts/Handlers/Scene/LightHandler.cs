@@ -45,7 +45,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 
 				if (lightGroupHandler == null)
 				{
-					Debug.LogWarning($"Missing {nameof(lightGroupHandler)} script on {gameObject.transform.parent.name}");
+					Debug.LogWarning($"Missing {nameof(lightGroupHandler)} script on {transform.parent.name}");
 				}
 			} else
 			{

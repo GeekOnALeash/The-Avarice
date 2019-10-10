@@ -10,17 +10,18 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 {
 	public sealed class KeypadWindowHandler : WindowHandler
 	{
-		public Text displayText;
+		[SerializeField] private Text displayText;
 
 		internal int keypadCode;
 		internal ComputerTerminalHandler calledBy;
 
-		private int _codeLength = 4;
 		private string _textToDisplay;
 		private int _keysPressedCount;
+		private Animator _animator;
+
+		private const int CodeLength = 4;
 		private const string DisplayPadding = "_";
 
-		private Animator _animator;
 		private static readonly int __Shake = Animator.StringToHash("Shake");
 
 		protected override void Start()
@@ -41,7 +42,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 		{
 			_textToDisplay = "";
 
-			for (int i = 1; i <= _codeLength; i++)
+			for (int i = 1; i <= CodeLength; i++)
 			{
 				_textToDisplay = $"{_textToDisplay}{DisplayPadding}";
 			}
@@ -55,7 +56,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 			_keysPressedCount += 1;
 			ReplaceCharAtPos(EventSystem.current.currentSelectedGameObject.name);
 
-			if (_keysPressedCount < _codeLength)
+			if (_keysPressedCount < CodeLength)
 			{
 				return;
 			}

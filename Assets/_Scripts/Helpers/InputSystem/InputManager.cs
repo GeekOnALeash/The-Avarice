@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
 {
-	public sealed class InputManager
+	internal sealed class InputManager
 	{
 		private readonly Action<InputAction.CallbackContext> _started;
 		private readonly Action<InputAction.CallbackContext> _performed;
@@ -33,7 +33,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
 			}
 		}
 
-		public void Enable()
+		internal void Enable()
 		{
 			if (_started != null)
 			{
@@ -53,7 +53,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
 			_gameInputActions.Enable();
 		}
 
-		public void Disable()
+		internal void Disable()
 		{
 			if (_started != null)
 			{
