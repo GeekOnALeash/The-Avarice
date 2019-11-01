@@ -44,7 +44,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Items
 				messageData.SetMessage($"<color=#{item.GetRarityColorHex()}>{item.name}</color> picked up.");
 			}
 
-			Controller.UI.contextMessageUI.ShowMessage(messageData);
+			Controller.UI.contextMessageUI.ShowMessage(messageData.GetContextMessage());
 
 			if (atCapacity)
 			{

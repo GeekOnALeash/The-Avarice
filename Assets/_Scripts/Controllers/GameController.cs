@@ -38,8 +38,8 @@ namespace com.ArkAngelApps.TheAvarice.Controllers
 
 		internal static void PauseGame()
 		{
-			__timeScaleRef = ClockController.GetTimeScale();
-			ClockController.SetTimeScale(0.0f);
+			__timeScaleRef = Time.timeScale;
+			Time.timeScale = 0.0f;
 
 			__volumeRef = AudioController.GetVolume();
 			AudioController.SetVolume(0f);
@@ -55,7 +55,7 @@ namespace com.ArkAngelApps.TheAvarice.Controllers
 				return;
 			}
 
-			ClockController.SetTimeScale(__timeScaleRef);
+			Time.timeScale = __timeScaleRef;
 			AudioController.SetVolume(__volumeRef);
 			isPaused = false;
 			GarbageManager.Collect();

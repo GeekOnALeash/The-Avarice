@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using com.ArkAngelApps.TheAvarice._Scripts.Data.Structs;
 using com.ArkAngelApps.TheAvarice.Data.Structs;
 using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
 using com.ArkAngelApps.TheAvarice.Scriptable.Items;
