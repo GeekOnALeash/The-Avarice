@@ -49,6 +49,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -101,13 +102,9 @@ MonoBehaviour:
     onPickUp:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     onUse:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   spriteRenderer: {fileID: 2845747654146795888}
 --- !u!58 &2299564758284299569
 CircleCollider2D:
@@ -150,25 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff802982d78de4f8b990bfe2e58fc72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverCursor: 1
-  leftClickCursor: 0
-  rightClickCursor: 0
-  hasCustomCursors: 0
-  cursorData: {fileID: 0}
+  cursorType: 3
+  customCursorData: {fileID: 0}
   onHover: 0
   onHoverEvent:
     unityEvent:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   onHoverExit: 0
   onHoverExitEvent:
     unityEvent:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   onLeftClick: 1
   onLeftClickEvent:
     unityEvent:
@@ -185,12 +175,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   onRightClick: 0
   onRightClickEvent:
     unityEvent:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null

@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d7cbd535c8344bebcfbf3bfc5b9206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playAutomatically: 1
-  anims: {fileID: 0}
+  moveAxis: {fileID: 0}
+  characterAnimations: {fileID: 0}
 --- !u!114 &2241578950902184268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
+  moveAxis: {fileID: 0}
   target: {fileID: 0}
   minDistance: 0
   maxDistance: 10

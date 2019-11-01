@@ -12,10 +12,8 @@ GameObject:
   - component: {fileID: 6476004513898117425}
   - component: {fileID: 5675036485501782566}
   - component: {fileID: 6476004513898117390}
-  - component: {fileID: 9112516025208754588}
   - component: {fileID: 8629592646777344502}
   - component: {fileID: 1345728823061019081}
-  - component: {fileID: 5498797872137898958}
   - component: {fileID: 3220778212005609451}
   m_Layer: 5
   m_Name: Stats@HUD
@@ -93,19 +91,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9112516025208754588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6476004513898117388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4194d592056624a2fb2de8480a279bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: 
 --- !u!114 &8629592646777344502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,11 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff802982d78de4f8b990bfe2e58fc72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverCursor: 1
-  leftClickCursor: 0
-  rightClickCursor: 0
-  hasCustomCursors: 0
-  cursorData: {fileID: 11400000, guid: 699d6a1a2a5454f35b0bdae5ed440421, type: 2}
+  cursorType: 0
+  customCursorData: {fileID: 0}
   onHover: 0
   onHoverEvent:
     unityEvent:
@@ -208,32 +190,6 @@ MonoBehaviour:
     unityEvent:
       m_PersistentCalls:
         m_Calls: []
---- !u!61 &5498797872137898958
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6476004513898117388}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 36, y: -12}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 72, y: 24}
-  m_EdgeRadius: 0
 --- !u!114 &3220778212005609451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +210,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6476004513898117391}
     m_Modifications:
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.02325816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.79726124
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.97094995
+      objectReference: {fileID: 0}
     - target: {fileID: 4488047452257421741, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
         type: 3}
       propertyPath: m_Name
@@ -530,26 +506,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: STAMINA
       objectReference: {fileID: 0}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.02325816
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.79726124
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.97094995
-      objectReference: {fileID: 0}
     - target: {fileID: 4106398791286904183, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
         type: 3}
       propertyPath: m_MaxValue
@@ -599,6 +555,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6476004513898117391}
     m_Modifications:
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 866b2fafae4e942eebadfa0d32c7f536, type: 2}
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4488047452257421741, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
         type: 3}
       propertyPath: m_Name
@@ -859,21 +830,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: HEALTH
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 866b2fafae4e942eebadfa0d32c7f536, type: 2}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275295453195198198, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4106398791286904183, guid: 74fa6c0d5f5b3483a944267971d1f1b0,
         type: 3}

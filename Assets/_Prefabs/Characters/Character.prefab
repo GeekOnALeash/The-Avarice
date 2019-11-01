@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bbc2c1e63e98543830eec78d976795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializedGuid: 742afccc33b51644b08230ab09644240
+  serializedGuid: 2059c0fa7fa71b46a82ace35ca5010a5
 --- !u!50 &1464536651453876426
 Rigidbody2D:
   serializedVersion: 4
@@ -409,7 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bceb039ced9499aa3136338093e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
   target: {fileID: 1464536651453876429}
   targetOffset: 0
 --- !u!114 &2705714872881607854
@@ -447,6 +446,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
+  moveAxis: {fileID: 0}
 --- !u!1 &5438395287079378789
 GameObject:
   m_ObjectHideFlags: 0

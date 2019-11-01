@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7921688572246148026}
   - component: {fileID: 4647878388141775765}
   - component: {fileID: 2873580337102428562}
+  - component: {fileID: 201572396929139085}
+  - component: {fileID: 1137793777030804685}
   m_Layer: 15
   m_Name: Point Light 2D
   m_TagString: Lighting
@@ -139,4 +141,71 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 8
+--- !u!114 &201572396929139085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647878388141775851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba04ed37fa9f342c0aabe45dd620de5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+    serializedVersion: 2
+    m_Bits: 2048
+  events:
+    onEnterEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1137793777030804685}
+          m_MethodName: EnableLight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onStayEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    onExitEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1137793777030804685}
+          m_MethodName: DisableLight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  ignoreTrigger: 0
+--- !u!114 &1137793777030804685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647878388141775851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2884780aa10944b30b8e2f6750e60fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObject: {fileID: 4647878388141775765}
+  spriteRenderer: {fileID: 7921688572246148026}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  pulseLight: 0
+  maxIntensity: 1
+  minIntensity: 0
+  pulseSpeed: 1

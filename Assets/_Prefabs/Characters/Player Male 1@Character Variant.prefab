@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f5b4c22e1e4104855f13f45522f81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playAutomatically: 0
-  anims: {fileID: 11400000, guid: 153c413885ac141d1947b682fb3dc332, type: 2}
+  moveAxis: {fileID: 0}
+  characterAnimations: {fileID: 0}
 --- !u!114 &8690155289925056557
 MonoBehaviour:
   m_ObjectHideFlags: 0

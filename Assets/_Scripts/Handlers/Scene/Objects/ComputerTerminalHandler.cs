@@ -52,14 +52,14 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 			}
 
 			_withinTrigger = true;
-			Controller.UI.contextMessageUI.ShowMessage(contextMessage);
+			Controller.UI.contextMessageUI.ShowMessage(contextMessage.GetContextMessage());
 		}
 
 		[UsedImplicitly]
 		public void TriggerExit()
 		{
 			_withinTrigger = false;
-			Controller.UI.contextMessageUI.HideMessage();
+			Controller.UI.contextMessageUI.HideUI();
 		}
 
 		[Il2CppSetOption(Option.NullChecks, false)]
@@ -85,6 +85,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 		internal void CodeCorrect()
 		{
 			onEnableEvent.Invoke();
+			Controller.UI.contextMessageUI.HideUI();
 		}
 	}
 }
