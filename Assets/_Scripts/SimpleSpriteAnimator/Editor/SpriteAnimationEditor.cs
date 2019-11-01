@@ -38,8 +38,6 @@ namespace SimpleSpriteAnimator
 
         public override void OnInspectorGUI()
         {
-            //serializedObject.Update();
-
             EditorGUI.BeginChangeCheck();
 
             if (SelectedSpriteAnimation != null && framesList != null)
@@ -58,8 +56,6 @@ namespace SimpleSpriteAnimator
             {
                 EditorUtility.SetDirty(target);
             }
-
-            //serializedObject.ApplyModifiedProperties();
         }
 
         public override bool HasPreviewGUI()
@@ -110,7 +106,6 @@ namespace SimpleSpriteAnimator
         private void InitializeFrameList()
         {
             framesList = new ReorderableList(SelectedSpriteAnimation.Frames, typeof(Sprite), true, true, true, true);
-            //framesList.elementHeight = EditorGUIUtility.singleLineHeight * 5f;
 
             framesList.drawElementCallback = DrawElement;
             framesList.drawHeaderCallback = DrawHeader;

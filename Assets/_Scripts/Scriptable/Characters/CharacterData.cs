@@ -21,7 +21,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 		public string characterName;
 		public ObjectType characterType;
 
-		[Header("Stats")] //public int healthPoints;
+		[Header("Stats")]
 		public IntVariable healthPoints;
 
 		public int maximumHealthPoints;
