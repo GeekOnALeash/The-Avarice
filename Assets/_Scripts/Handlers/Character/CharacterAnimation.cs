@@ -51,6 +51,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 		{
 			_frameID = 0;
 
+			// ReSharper disable once ConvertSwitchStatementToSwitchExpression
 			switch (direction)
 			{
 				case Direction.Idle:
