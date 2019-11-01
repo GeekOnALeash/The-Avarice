@@ -24,7 +24,7 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 				return;
 			}
 
-			Controller.UI.hoverText.SetHideText(true);
+			Controller.UI.hoverText.ToggleUI();
 			transform.position = pos;
 		}
 

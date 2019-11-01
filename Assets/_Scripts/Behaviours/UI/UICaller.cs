@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using JetBrains.Annotations;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -9,29 +8,35 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours.UI
 	[DisallowMultipleComponent]
 	public class UICaller : BaseBehaviour
 	{
-		public CanvasGroup canvasGroup;
+		[SerializeField] private CanvasGroup canvasGroup;
 
-		internal bool uiShown;
+		private bool _uiShown;
 
 		private void Reset()
 		{
-			canvasGroup = GetComponent<CanvasGroup>();
-
-			if (!canvasGroup)
-			{
-				canvasGroup = gameObject.AddComponent<CanvasGroup>();
-			}
-
-			HideUI();
+			GetOrAddCanvasGroupComponent();
 		}
 
-		[SuppressMessage("ReSharper", "InvertIf")]
 		private void Awake()
 		{
-			if (!canvasGroup)
+			GetOrAddCanvasGroupComponent();
+		}
+
+		private void GetOrAddCanvasGroupComponent()
+		{
+			if (canvasGroup)
 			{
-				canvasGroup = GetComponent<CanvasGroup>();
+				return;
 			}
+
+			canvasGroup = GetComponent<CanvasGroup>();
+
+			if (canvasGroup)
+			{
+				return;
+			}
+
+			canvasGroup = gameObject.AddComponent<CanvasGroup>();
 
 			Assert.IsNotNull(canvasGroup, "canvasGroup is null");
 		}
@@ -39,23 +44,33 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours.UI
 		public void ShowUI()
 		{
 			canvasGroup.alpha = 1f;
-			canvasGroup.interactable = true;
-			canvasGroup.blocksRaycasts = true;
-			uiShown = true;
+			SetInteractable(true);
+			_uiShown = true;
 		}
 
 		public void HideUI()
 		{
 			canvasGroup.alpha = 0f;
-			canvasGroup.interactable = false;
-			canvasGroup.blocksRaycasts = false;
-			uiShown = false;
+			SetInteractable(false);
+			_uiShown = false;
 		}
 
-		[UsedImplicitly]
-		public void ToggleUI()
+		public virtual IEnumerator HideAfterTimer(float time)
 		{
-			if (uiShown)
+			yield return new WaitForSeconds(time);
+
+			HideUI();
+		}
+
+		private void SetInteractable(bool interactable)
+		{
+			canvasGroup.interactable = interactable;
+			canvasGroup.blocksRaycasts = interactable;
+		}
+
+		public virtual void ToggleUI()
+		{
+			if (_uiShown)
 			{
 				HideUI();
 			} else

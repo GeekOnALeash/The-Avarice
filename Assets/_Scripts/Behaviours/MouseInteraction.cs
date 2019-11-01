@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using com.ArkAngelApps.TheAvarice.Scriptable.System;
+using com.ArkAngelApps.TheAvarice.Scriptable.UI;
 using com.ArkAngelApps.UtilityLibraries.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-namespace com.ArkAngelApps.TheAvarice.Helpers
+namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
-	public sealed class MouseInteraction : MouseCursorHelper
+	public sealed class MouseInteraction : MouseCursorHelper, IPointerEnterHandler, IPointerExitHandler
 	{
+		// This struct is used to simply provide a collapsible section for each event
 		[Serializable]
 		public struct MouseEvents
 		{
@@ -42,21 +45,18 @@ namespace com.ArkAngelApps.TheAvarice.Helpers
 		[SuppressMessage("ReSharper", "InvertIf")]
 		private void OnMouseOver()
 		{
-			if (hoverCursor)
+			if (cursorType == CursorType.Custom)
 			{
-				if (hasCustomCursors)
-				{
-					SystemVariables.Instance.cursors.SetCursor(cursorData.hoverCursor);
-				} else
-				{
-					SystemVariables.Instance.cursors.SetHoverCursor();
-				}
+				SystemVariables.Instance.cursors.SetCursor(customCursorData.hoverCursor);
+			} else
+			{
+				SystemVariables.Instance.cursors.SetCursor(cursorType);
 			}
 
 			if (onHover && !_hoverStay)
 			{
 				_hoverStay = true;
-				OnHover();
+				onHoverEvent.unityEvent.Invoke();
 			}
 
 			if (onLeftClick)
@@ -78,53 +78,42 @@ namespace com.ArkAngelApps.TheAvarice.Helpers
 		{
 			_hoverStay = false;
 
-			if (hoverCursor)
+			if (cursorType == CursorType.Custom)
 			{
-				if (hasCustomCursors)
-				{
-					SystemVariables.Instance.cursors.SetCursor(cursorData.defaultCursor);
-				} else
-				{
-					SystemVariables.Instance.cursors.SetDefaultCursor();
-				}
+				SystemVariables.Instance.cursors.SetCursor(customCursorData.defaultCursor);
+			} else
+			{
+				SystemVariables.Instance.cursors.SetDefaultCursor();
 			}
 
 			if (onHoverExit)
 			{
-				OnExit();
+				onHoverExitEvent.unityEvent.Invoke();
 			}
-		}
-
-		private void OnHover()
-		{
-			onHoverEvent.unityEvent.Invoke();
-		}
-
-		private void OnExit()
-		{
-			onHoverExitEvent.unityEvent.Invoke();
 		}
 
 		private void OnLeftClick()
 		{
-			if (leftClickCursor)
-			{
-				// Add code and cursor for left click cursor depending on item
-			}
+			Debug.Log("Left Click");
 
 			onLeftClickEvent.unityEvent.Invoke();
 		}
 
 		private void OnRightClick()
 		{
-			if (rightClickCursor)
-			{
-				// Add code and cursor for right click cursor depending on item
-			}
-
 			Debug.Log("Right Click");
 
 			onRightClickEvent.unityEvent.Invoke();
+		}
+
+		public void OnPointerEnter(PointerEventData eventData)
+		{
+			OnMouseOver();
+		}
+
+		public void OnPointerExit(PointerEventData eventData)
+		{
+			OnMouseExit();
 		}
 	}
 }
