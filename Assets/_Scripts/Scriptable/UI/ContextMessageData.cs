@@ -32,9 +32,9 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 			_runtimeMessage = contextMessage;
 		}
 
-		public string GetMessage() => _runtimeMessage.message;
+		public string GetMessage() => _runtimeMessage.Message;
 
-		internal void SetMessage(string text) => _runtimeMessage.message = text;
+		internal void SetMessage(string text) => _runtimeMessage.Message = text;
 
 		internal ContextMessage GetContextMessage() => FormatMessage();
 
@@ -42,7 +42,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 		{
 			if (hasKeyCommand)
 			{
-				_runtimeMessage.message = contextMessage.message.Replace(KeyReplacementPattern,
+				_runtimeMessage.Message = contextMessage.Message.Replace(KeyReplacementPattern,
 				                                                         SystemVariables.Instance.keybinds
 				                                                                        .commandToKeyDictionary[_runtimeCommand]);
 			}

@@ -1,10 +1,12 @@
 using com.ArkAngelApps.TheAvarice.Behaviours;
 using com.ArkAngelApps.TheAvarice.Behaviours.UI;
-using com.ArkAngelApps.TheAvarice.Helpers;
 using com.ArkAngelApps.TheAvarice.Managers;
+using com.ArkAngelApps.TheAvarice.Scriptable.Achievements;
 using com.ArkAngelApps.TheAvarice.Scriptable.System;
+using com.ArkAngelApps.TheAvarice.Scriptable.UI;
 using com.ArkAngelApps.UtilityLibraries;
 using EasyButtons;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -32,6 +34,8 @@ namespace com.ArkAngelApps.TheAvarice.Controllers
 		public RadialSelection radialSelectionUI;
 		public HoverText hoverText;
 		public ContextMessageUI contextMessageUI;
+
+		[SerializeField] private NotificationUI notificationUI;
 
 		[Header("Other")]
 		[Tooltip("UI elements to hide on scene load.")]
@@ -65,7 +69,13 @@ namespace com.ArkAngelApps.TheAvarice.Controllers
 			radialSelectionUI.SetRadialPosition(caller.transform.position);
 		}
 
+		internal void ShowNotification(NotificationData notification)
+		{
+			notificationUI.ShowNotification(notification);
+		}
+
 		[Button]
+		[UsedImplicitly]
 		public void ToggleFPS()
 		{
 			SystemVariables.Instance.settings.ui.showFPSEvent.Raise();
