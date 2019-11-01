@@ -209,7 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bceb039ced9499aa3136338093e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
   target: {fileID: 5667975670601863468}
   targetOffset: 0
 --- !u!114 &2152759586234753372
@@ -253,11 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2884780aa10944b30b8e2f6750e60fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
   lightObject: {fileID: 205187848280206517}
-  spriteRenderer: {fileID: 5667975670601863469}
+  spriteRenderer: {fileID: 0}
   color: {r: 0.21176471, g: 0.34901962, b: 0.8627451, a: 1}
-  lightGroupHandler: {fileID: 0}
   pulseLight: 1
   maxIntensity: 1
   minIntensity: 0.8

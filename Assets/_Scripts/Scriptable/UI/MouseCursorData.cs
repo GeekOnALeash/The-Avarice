@@ -1,12 +1,14 @@
-﻿using Unity.Mathematics;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 {
-	internal enum CursorType
+	public enum CursorType
 	{
+		Hover,
+		Help,
+		Info,
 		Default,
-		Hover
+		Custom
 	}
 
 	[CreateAssetMenu(fileName = "NewMouseCursors", menuName = "ScriptableObjects/UI/Mouse Cursors", order = 4)]
@@ -15,17 +17,9 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 		public Texture2D defaultCursor;
 		public Texture2D hoverCursor;
 
-		public float2 hotspot = float2.zero;
+		public Vector2 hotspot = Vector2.zero;
 
-		internal void SetDefaultCursor()
-		{
-			SetCursor(defaultCursor);
-		}
-
-		internal void SetHoverCursor()
-		{
-			SetCursor(hoverCursor);
-		}
+		internal void SetDefaultCursor() => SetCursor(CursorType.Default);
 
 		internal void SetCursor(CursorType cursorType)
 		{
@@ -36,6 +30,12 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 					break;
 				case CursorType.Hover:
 					SetCursor(hoverCursor);
+					break;
+				case CursorType.Custom:
+					break;
+				case CursorType.Help:
+					break;
+				case CursorType.Info:
 					break;
 				default:
 					SetCursor(defaultCursor);

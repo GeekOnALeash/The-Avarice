@@ -1,22 +1,21 @@
 ﻿using com.ArkAngelApps.TheAvarice.Scriptable.System;
-using com.ArkAngelApps.UtilityLibraries.Attributes;
 using com.ArkAngelApps.TheAvarice.Scriptable.UI;
+using com.ArkAngelApps.UtilityLibraries.Attributes;
 using UnityEngine;
 
-namespace com.ArkAngelApps.TheAvarice.Helpers
+namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
 	public class MouseCursorHelper : MonoBehaviour
 	{
-		[Header("Cursors to Show")]
-		public bool hoverCursor;
+		public CursorType cursorType = CursorType.Default;
 
-		public bool leftClickCursor;
-		public bool rightClickCursor;
+		[ShowWhen(nameof(cursorType), CursorType.Custom)]
+		public MouseCursorData customCursorData;
 
-		public bool hasCustomCursors;
-
-		[ShowWhen(nameof(hasCustomCursors))] public MouseCursorData cursorData;
-
+		/// <summary>
+		/// Get the mouse pointer position on screen based of camer.ScreenToWorldPoint.
+		/// </summary>
+		/// <returns>World point position based of screen position of the mouse pointer.</returns>
 		internal static Vector2 GetMousePosition() =>
 			SystemVariables.Instance.mainCamera.camera.ScreenToWorldPoint(Input.mousePosition);
 	}

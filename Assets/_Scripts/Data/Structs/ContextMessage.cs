@@ -5,18 +5,33 @@ namespace com.ArkAngelApps.TheAvarice.Data.Structs
 	[System.Serializable]
 	public struct ContextMessage
 	{
-		public string message;
-		public Color color;
+		[SerializeField] private string message;
+		[SerializeField] private Color color;
+		[SerializeField] private bool hasTimer;
+		[SerializeField] private int timer;
 
-		public bool hasTimer;
-		public int timer;
-
-		public ContextMessage(string text, Color color, bool hasTimer, int timer)
+		public string Message
 		{
-			this.message = text;
-			this.color = color;
-			this.hasTimer = hasTimer;
-			this.timer = timer;
+			get => message;
+			set => message = value;
+		}
+
+		public Color Color
+		{
+			get => color;
+			set => color = value;
+		}
+
+		public bool HasTimer
+		{
+			get => hasTimer;
+			set => hasTimer = value;
+		}
+
+		public int Timer
+		{
+			get => timer;
+			set => timer = value;
 		}
 	}
 }

@@ -163,11 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2884780aa10944b30b8e2f6750e60fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
   lightObject: {fileID: 3365668209827162817}
-  spriteRenderer: {fileID: 5038711531286020340}
+  spriteRenderer: {fileID: 0}
   color: {r: 0.8509804, g: 0.3529412, b: 0.44705883, a: 1}
-  lightGroupHandler: {fileID: 0}
   pulseLight: 0
   maxIntensity: 1
   minIntensity: 0

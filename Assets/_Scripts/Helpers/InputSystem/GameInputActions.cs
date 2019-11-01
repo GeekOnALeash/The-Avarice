@@ -1,5 +1,6 @@
 // GENERATED AUTOMATICALLY FROM 'Assets/_Other/Input/GameInputActions.inputactions'
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
@@ -7,7 +8,7 @@ using UnityEngine.InputSystem.Utilities;
 
 namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
 {
-    public class GameInputActions : IInputActionCollection
+    public class GameInputActions : IInputActionCollection, IDisposable
     {
         private InputActionAsset asset;
         public GameInputActions()
@@ -643,7 +644,7 @@ namespace com.ArkAngelApps.TheAvarice.Helpers.InputSystem
             m_UI_TrackedDeviceSelect = m_UI.FindAction("TrackedDeviceSelect", throwIfNotFound: true);
         }
 
-        ~GameInputActions()
+        public void Dispose()
         {
             UnityEngine.Object.Destroy(asset);
         }

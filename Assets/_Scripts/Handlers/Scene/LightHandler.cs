@@ -9,52 +9,40 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 	[ExecuteInEditMode]
 	public sealed class LightHandler : CachedTransformBase
 	{
-		public Light2D lightObject;
-		public SpriteRenderer spriteRenderer;
-		public Color color;
-		public LightGroupHandler lightGroupHandler;
-		public bool pulseLight;
+		[SerializeField] private Light2D lightObject;
+		[SerializeField] private SpriteRenderer spriteRenderer;
+		[SerializeField] private Color color;
+		[SerializeField] private bool pulseLight;
 
 		[ShowWhen(nameof(pulseLight))]
-		public float maxIntensity = 1f;
+		[SerializeField]
+		private float maxIntensity = 1f;
 
 		[ShowWhen(nameof(pulseLight))]
-		public float minIntensity;
+		[SerializeField]
+		private float minIntensity;
 
 		[ShowWhen(nameof(pulseLight))]
-		public float pulseSpeed = 1f; //here, a value of 0.5f would take 2 seconds and a value of 2f would take half a second
+		[SerializeField]
+		private float pulseSpeed = 1f; //here, a value of 0.5f would take 2 seconds and a value of 2f would take half a second
 
 		private Color _oldColor;
 		private float _targetIntensity = 1f;
 		private float _currentIntensity;
-		private bool _isSpriteRendererNotNull;
 
 		private void Awake()
 		{
-			_isSpriteRendererNotNull = spriteRenderer != null;
-
 			_oldColor = lightObject.color;
 			ChangeColor(color);
-		}
 
-		private void Start()
-		{
-			if (lightGroupHandler == null)
+			if (Application.isPlaying)
 			{
-				lightGroupHandler = GetComponentInParent<LightGroupHandler>();
-
-				if (lightGroupHandler == null)
-				{
-					Debug.LogWarning($"Missing {nameof(lightGroupHandler)} script on {transform.parent.name}");
-				}
-			} else
-			{
-				lightGroupHandler.lightsInGroup.Add(this);
+				DisableLight();
 			}
 		}
 
 		[SuppressMessage("ReSharper", "InvertIf")]
-		private void Update()
+		private void LateUpdate()
 		{
 			if (_oldColor != color)
 			{
@@ -80,15 +68,13 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 
 		private void ChangeColor(Color newColor)
 		{
-			color = newColor;
 			lightObject.color = newColor;
+			_oldColor = newColor;
 
-			if (_isSpriteRendererNotNull)
+			if (spriteRenderer)
 			{
 				spriteRenderer.color = newColor;
 			}
-
-			_oldColor = newColor;
 		}
 
 		public void ChangeColorWithHex(string hex)
@@ -99,7 +85,18 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 				return;
 			}
 
+			color = newColor;
 			ChangeColor(newColor);
+		}
+
+		public void DisableLight()
+		{
+			lightObject.enabled = false;
+		}
+
+		public void EnableLight()
+		{
+			lightObject.enabled = true;
 		}
 	}
 }
