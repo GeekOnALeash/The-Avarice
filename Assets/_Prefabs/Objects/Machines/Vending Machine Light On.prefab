@@ -95,7 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bceb039ced9499aa3136338093e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
+  usesSortingGroup: 0
+  spriteRenderer: {fileID: 5004195875901233699}
+  sortingGroup: {fileID: 0}
   target: {fileID: 4910863436575425356}
   targetOffset: 0
 --- !u!61 &8325721706127817687

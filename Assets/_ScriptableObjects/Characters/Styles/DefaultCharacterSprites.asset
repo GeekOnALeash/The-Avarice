@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ca4069da6434c8abb0420da43e5269, type: 3}
+  m_Name: DefaultCharacterSprites
+  m_EditorClassIdentifier: 
+  characterType: 0
+  bodySprite: {fileID: 11400000, guid: c7b365d47aeeb4a00870ce54a9916ddc, type: 2}
+  hairSprite: {fileID: 11400000, guid: d77fd1884ee5e4a2c9609479e09dee4b, type: 2}
+  eyeLashesSprite: {fileID: 11400000, guid: ffe59070469954674a9db33e5ccfdf19, type: 2}
+  eyesSprite: {fileID: 11400000, guid: 242f90ba391f4496dbd971e1597b896d, type: 2}
+  eyeBaseSprite: {fileID: 11400000, guid: 03a7d57b79a55408d8a60f1f61ea7492, type: 2}
+  eyeMaskSprite: {fileID: 11400000, guid: 5ffa0965ff1d04be2bf5cb0fcbd06af0, type: 2}
+  beardSprite: {fileID: 0}
+  hatSprite: {fileID: 0}
+  shirtSprite: {fileID: 11400000, guid: 33b2c04aa286a4499b573787cca279a7, type: 2}
+  beltSprite: {fileID: 11400000, guid: 29c32550aa7414dcc8476e948be77663, type: 2}
+  trousersSprite: {fileID: 11400000, guid: 74748a907770245ceb0aed1455203c29, type: 2}
+  shoesSprite: {fileID: 11400000, guid: bd9b48c13352d4522bc0bc35803ae3ce, type: 2}

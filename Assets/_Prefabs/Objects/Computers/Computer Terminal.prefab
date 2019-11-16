@@ -116,9 +116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bceb039ced9499aa3136338093e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
+  usesSortingGroup: 0
+  spriteRenderer: {fileID: 6568166320427069835}
+  sortingGroup: {fileID: 0}
   target: {fileID: 6568166320427069832}
-  targetOffset: 0
+  targetOffset: -2
 --- !u!1001 &2399232145856778
 PrefabInstance:
   m_ObjectHideFlags: 0

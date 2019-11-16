@@ -100,6 +100,12 @@ TagManager:
   - name: Dynamic Sorting Layer
     uniqueID: 3393972251
     locked: 0
+  - name: Character Body
+    uniqueID: 3694077873
+    locked: 0
+  - name: Character Clothing
+    uniqueID: 478352291
+    locked: 0
   - name: Shadows
     uniqueID: 2265521555
     locked: 0

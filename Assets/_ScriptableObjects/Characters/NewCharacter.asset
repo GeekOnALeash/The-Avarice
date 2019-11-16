@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004a9646815d64a16ac2bde65f19cabe, type: 3}
+  m_Name: NewCharacter
+  m_EditorClassIdentifier: 
+  description: 
+  name: Louie Amare Lara
+  image: {fileID: 0}
+  spriteBase: {fileID: 0}
+  characterName: 
+  characterType: 0
+  healthPoints: {fileID: 0}
+  maximumHealthPoints: 0
+  shieldPoints: 0
+  armourPoints: 0
+  attackPoints: 0
+  uiTextColor: {r: 0, g: 0, b: 0, a: 0}
+  uiBorderColor: {r: 0, g: 0, b: 0, a: 0}
