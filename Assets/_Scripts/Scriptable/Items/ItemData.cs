@@ -28,7 +28,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Items
 		Epic
 	}
 
-	[CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/Items/Item", order = 1)]
+	[CreateAssetMenu(fileName = "NewItem", menuName = "Scriptable/Items/Item", order = 1)]
 	public sealed class ItemData : ScriptableObject
 	{
 		[TextArea(10, 40)] public string description;

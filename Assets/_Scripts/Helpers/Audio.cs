@@ -1,4 +1,5 @@
 ﻿using com.ArkAngelApps.TheAvarice.Abstracts;
+using com.ArkAngelApps.TheAvarice.Behaviours;
 using com.ArkAngelApps.TheAvarice.Scriptable.Events;
 using JetBrains.Annotations;
 using UnityEngine;

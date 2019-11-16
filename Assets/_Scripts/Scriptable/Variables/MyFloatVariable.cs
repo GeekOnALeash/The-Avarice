@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Variables
 {
-	[CreateAssetMenu(fileName = "NewFloatValue", menuName = "ScriptableObjects/Variables/Float", order = 2)]
+	[CreateAssetMenu(fileName = "NewFloatValue", menuName = "Scriptable/Variables/Float", order = 2)]
 	public sealed class MyFloatVariable : GenericScriptableObject<float>, IWithApplyChange<float>
 	{
 		public bool ApplyChange(float amount) => SetValue(RuntimeValue + amount);

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 {
-	[CreateAssetMenu(fileName = "_PlayerRuntimeData", menuName = "ScriptableObjects/In-Game/Characters/PlayerRuntimeData", order = 2)]
+	[CreateAssetMenu(fileName = "_PlayerRuntimeData", menuName = "Scriptable/Character/PlayerRuntimeData", order = 2)]
 	public sealed class PlayerRuntimeData : SingletonScriptableObject<PlayerRuntimeData>
 	{
 		public Player character;

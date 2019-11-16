@@ -15,8 +15,6 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 		public Vector2Variable moveAxis;
 
 		protected bool movementEnabled = true;
-		protected Vector2 movement;
-		protected Vector2 pos;
 		protected Rigidbody2D rb2D;
 
 		protected virtual void Start()

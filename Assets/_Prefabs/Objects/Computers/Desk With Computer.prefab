@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bceb039ced9499aa3136338093e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateWhenDisabled: 1
+  usesSortingGroup: 0
+  spriteRenderer: {fileID: 355210776595106044}
+  sortingGroup: {fileID: 0}
   target: {fileID: 355210776595106051}
-  targetOffset: 0
+  targetOffset: -2
 --- !u!61 &4958336419869225457
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -22,8 +22,9 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 
 		private int _frameID;
 		private int _lastFrameID;
-		private static readonly int __Horizontal = Animator.StringToHash("horizontal");
-		private static readonly int __Vertical = Animator.StringToHash("vertical");
+		private static readonly int __PosY = Animator.StringToHash("posY");
+		private static readonly int __PosX = Animator.StringToHash("posX");
+		private static readonly int __IsMoving = Animator.StringToHash("isMoving");
 
 		public enum Direction
 		{
@@ -42,9 +43,14 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 
 		private void LateUpdate()
 		{
-			_animator.SetFloat(__Horizontal, moveAxis.Value.x);
-			_animator.SetFloat(__Vertical, moveAxis.Value.y);
+			_animator.SetFloat(__PosY, moveAxis.Value.y);
+			_animator.SetFloat(__PosX, moveAxis.Value.x);
+
+			_animator.SetBool(__IsMoving, IsMoving());
 		}
+
+		private bool IsMoving() =>
+			Math.Abs(moveAxis.Value.x) > 0.1f && Math.Abs(moveAxis.Value.y) > 0.1f;
 
 		[UsedImplicitly]
 		public void SetAnimation(Direction direction)
@@ -83,7 +89,13 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 
 			if (_frameID > _lastFrameID)
 			{
-				return;
+				if (_currentAnim.SpriteAnimationType == SpriteAnimationType.Looping)
+				{
+					_frameID = 0;
+				} else
+				{
+					return;
+				}
 			}
 
 			SetAnimationFrameToRenderer(_frameID);

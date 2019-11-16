@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace com.ArkAngelApps.TheAvarice.Abstracts
+namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
 	/// <summary>
 	/// This is used to add an empty Awake method to ensure the script is available to Start methods

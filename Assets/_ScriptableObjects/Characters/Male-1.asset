@@ -16,8 +16,8 @@ MonoBehaviour:
   name: Male 1 Base
   image: {fileID: 21300000, guid: 8cc8d0281e7d24825b463fe3c3e5e10f, type: 3}
   characterName: Male 1 Base
-  characterType: 0
-  healthPoints: {fileID: 11400000, guid: b74b3b52bdc3e48309c2845f6ed55f3c, type: 2}
+  characterType: 2
+  healthPoints: {fileID: 0}
   maximumHealthPoints: 100
   shieldPoints: 0
   armourPoints: 50

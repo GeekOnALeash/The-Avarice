@@ -1,4 +1,4 @@
-using com.ArkAngelApps.TheAvarice.Abstracts;
+using com.ArkAngelApps.TheAvarice.Behaviours;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 {

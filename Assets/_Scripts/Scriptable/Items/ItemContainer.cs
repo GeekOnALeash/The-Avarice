@@ -25,7 +25,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Items
 		Yellow
 	}
 
-	[CreateAssetMenu(fileName = "NewItemContainer", menuName = "ScriptableObjects/Items/ItemContainer", order = 1)]
+	[CreateAssetMenu(fileName = "NewItemContainer", menuName = "Scriptable/Items/ItemContainer", order = 1)]
 	public sealed class ItemContainer : ScriptableObject, ISerializationCallbackReceiver
 	{
 		[HelpBox("These values will not be update during runtime, use this to setup overall container size.", HelpBoxMessageType.Info)]

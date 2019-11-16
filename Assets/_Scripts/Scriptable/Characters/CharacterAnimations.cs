@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 {
-	[CreateAssetMenu(fileName = "CharacterAnimations", menuName = "ScriptableObjects/In-Game/Characters/CharacterAnimations", order = 5)]
+	[CreateAssetMenu(fileName = "CharacterAnimations", menuName = "Scriptable/Character/Animations", order = 5)]
 	public sealed class CharacterAnimations : ScriptableObject
 	{
 		public SpriteAnimation[] idle;

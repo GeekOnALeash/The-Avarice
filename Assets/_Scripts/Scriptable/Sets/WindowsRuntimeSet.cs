@@ -3,6 +3,6 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Sets
 {
-	[CreateAssetMenu(fileName = "WindowsRuntimeSet", menuName = "ScriptableObjects/RuntimeSets/Windows", order = 1)]
+	[CreateAssetMenu(fileName = "WindowsRuntimeSet", menuName = "Scriptable/RuntimeSets/Windows", order = 1)]
 	public sealed class WindowsRuntimeSet : RuntimeSet<WindowHandler> { }
 }

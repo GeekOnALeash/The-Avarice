@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Effects
 {
-	[CreateAssetMenu(fileName = "BoostHealthEffect", menuName = "ScriptableObjects/In-Game/Effects/Boost Health", order = 1)]
+	[CreateAssetMenu(fileName = "BoostHealthEffect", menuName = "Scriptable/Effects/Boost Health", order = 1)]
 	public sealed class BoostHealthEffect : Effect
 	{
 		public int amount;

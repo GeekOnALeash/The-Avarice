@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Variables
 {
-    [CreateAssetMenu(fileName = "NewStringValue", menuName = "ScriptableObjects/Variables/String", order = 3)]
+    [CreateAssetMenu(fileName = "NewStringValue", menuName = "Scriptable/Variables/String", order = 3)]
     public sealed class StringVariable : GenericScriptableObject<string>, IWithApplyChange<string>
     {
         public bool ApplyChange(string amount) => SetValue(amount);

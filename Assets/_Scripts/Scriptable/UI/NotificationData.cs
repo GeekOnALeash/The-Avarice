@@ -10,7 +10,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 		Message
 	}
 
-	[CreateAssetMenu(fileName = "NewNotification", menuName = "ScriptableObjects/UI/Notification", order = 5)]
+	[CreateAssetMenu(fileName = "NewNotification", menuName = "Scriptable/UI/Notification", order = 5)]
 	public class NotificationData : UIDataBase
 	{
 		[SerializeField] private NotificationType notificationType;

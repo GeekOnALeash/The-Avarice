@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1224454113}
   - component: {fileID: 1224454115}
   - component: {fileID: 1224454114}
+  - component: {fileID: 6282586697642962559}
   m_Layer: 16
   m_Name: Force Field
   m_TagString: Barriers
@@ -209,6 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bceb039ced9499aa3136338093e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSortingGroup: 0
+  spriteRenderer: {fileID: 5667975670601863469}
+  sortingGroup: {fileID: 0}
   target: {fileID: 5667975670601863468}
   targetOffset: 0
 --- !u!114 &2152759586234753372
@@ -299,6 +303,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 308cd5a114d6f47b3b96cb4c01b9c01e, type: 2}
   activeSlot: 0
+--- !u!208 &6282586697642962559
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667975670601863459}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.19, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.3, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5742607531179130882
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +387,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2029445741
-  m_SortingLayer: 16
+  m_SortingLayer: 18
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d9072dfd1473946afb5ca823ff51a178, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

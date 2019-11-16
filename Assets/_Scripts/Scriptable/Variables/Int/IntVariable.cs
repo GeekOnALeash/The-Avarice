@@ -4,7 +4,7 @@ using NotImplementedException = System.NotImplementedException;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Variables.Int
 {
-	[CreateAssetMenu(fileName = "NewIntValue", menuName = "ScriptableObjects/Variables/Int/Int", order = 1)]
+	[CreateAssetMenu(fileName = "NewIntValue", menuName = "Scriptable/Variables/Int/Int", order = 1)]
 	public class IntVariable : EquatableScriptableObjectVariable<int, IntEvent, IntIntEvent>, IWithApplyChange<int, IntEvent, IntIntEvent>
 	{
 		[SerializeField] protected int maxValue;

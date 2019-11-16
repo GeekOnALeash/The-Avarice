@@ -2,7 +2,7 @@
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Items
 {
-	[CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/In-Game/ItemRarityColors", order = 5)]
+	[CreateAssetMenu(fileName = "NewItem", menuName = "Scriptable/Items/Item Rarity Colors", order = 5)]
 	public class ItemRarityColorData : ScriptableObject
 	{
 		public Color crafted;

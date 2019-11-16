@@ -2,7 +2,7 @@
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.System
 {
-	[CreateAssetMenu(fileName = "TagNames", menuName = "ScriptableObjects/System/Tag Names", order = 2)]
+	[CreateAssetMenu(fileName = "TagNames", menuName = "Scriptable/System/Tag Names", order = 2)]
 	public sealed class TagNames : SingletonScriptableObject<TagNames>
 	{
 		[SerializeField] private string player = "Player";

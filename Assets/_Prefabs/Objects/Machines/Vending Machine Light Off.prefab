@@ -58,5 +58,21 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 3667780038513866160, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: usesSortingGroup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667780038513866160, guid: f0de5b89061eb4621a243baa43af6703,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1154207391212098994}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0de5b89061eb4621a243baa43af6703, type: 3}
+--- !u!212 &1154207391212098994 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5004195875901233699, guid: f0de5b89061eb4621a243baa43af6703,
+    type: 3}
+  m_PrefabInstance: {fileID: 6158364777761640337}
+  m_PrefabAsset: {fileID: 0}

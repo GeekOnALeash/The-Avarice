@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.System
 {
-	[CreateAssetMenu(fileName = "_SystemVariables", menuName = "ScriptableObjects/System/SystemVariables", order = 1)]
+	[CreateAssetMenu(fileName = "_SystemVariables", menuName = "Scriptable/System/SystemVariables", order = 1)]
 	public sealed class SystemVariables : SingletonScriptableObject<SystemVariables>
 	{
 		public KeybindingsData keybinds;

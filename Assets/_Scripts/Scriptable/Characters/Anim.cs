@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 {
-	[CreateAssetMenu(fileName = "AnimationStates", menuName = "ScriptableObjects/In-Game/Characters/AnimationStates", order = 6)]
+	[CreateAssetMenu(fileName = "AnimationStates", menuName = "Scriptable/Character/Animation States", order = 6)]
 	public sealed class Anim : ScriptableObject
 	{
 		public float timebetweenFrames;

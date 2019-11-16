@@ -23,7 +23,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Objects.Weapons
 		Poison
 	}
 
-	[CreateAssetMenu(fileName = "NewArmament", menuName = "ScriptableObjects/In-Game/Armament", order = 7)]
+	[CreateAssetMenu(fileName = "NewArmament", menuName = "Scriptable/Objects/Weapons/Armament", order = 7)]
 	public sealed class Armament : ScriptableObject
 	{
 		public ArmamentType armamentType;
