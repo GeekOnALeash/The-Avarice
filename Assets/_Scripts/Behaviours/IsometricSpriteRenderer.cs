@@ -1,17 +1,25 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
+using com.ArkAngelApps.UtilityLibraries.Attributes;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Rendering;
 
 namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
 	[ExecuteInEditMode]
-	[RequireComponent(typeof(SpriteRenderer))]
 	public sealed class IsometricSpriteRenderer : BaseBehaviour
 	{
 		private const int IsometricRangePerYUnit = -10;
-		private SpriteRenderer _spriteRenderer;
+		public bool usesSortingGroup = true;
+
+		[SerializeField]
+		private SpriteRenderer spriteRenderer;
+
+		[ShowWhen(nameof(usesSortingGroup), true)]
+		[SerializeField]
+		private SortingGroup sortingGroup;
 
 		[Tooltip("Will use this object to compute z-order")]
 		public Transform target;
@@ -30,10 +38,9 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 				target = transform;
 			}
 
-			_spriteRenderer = GetComponent<SpriteRenderer>();
-			Assert.IsNotNull(_spriteRenderer, "_spriteRenderer is null");
+			Assert.IsNotNull(spriteRenderer, "spriteRenderer != null");
 
-			_sizeY = _spriteRenderer.bounds.size.y;
+			_sizeY = spriteRenderer.bounds.size.y;
 		}
 
 		[SuppressMessage("ReSharper", "InvertIf")]
@@ -43,7 +50,16 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 
 			if (Math.Abs(_oldPosition.y - target.position.y) > 0.01f)
 			{
-				_spriteRenderer.sortingOrder = (int) ((_position.y - _sizeY / 2) * IsometricRangePerYUnit) + targetOffset;
+				int sortingOrder = (int) ((_position.y - _sizeY / 2) * IsometricRangePerYUnit) + targetOffset;
+
+				if (usesSortingGroup)
+				{
+					sortingGroup.sortingOrder = sortingOrder;
+				} else
+				{
+					spriteRenderer.sortingOrder = sortingOrder;
+				}
+
 				_oldPosition = _position;
 			}
 		}
