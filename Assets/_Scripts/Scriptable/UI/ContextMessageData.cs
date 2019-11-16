@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 {
-	[CreateAssetMenu(fileName = "NewContextMessage", menuName = "ScriptableObjects/UI/ContextMessage", order = 4)]
+	[CreateAssetMenu(fileName = "NewContextMessage", menuName = "Scriptable/UI/ContextMessage", order = 4)]
 	public sealed class ContextMessageData : ScriptableObject, ISerializationCallbackReceiver
 	{
 		private const string KeyReplacementPattern = "***Key***";

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Variables
 {
-	[CreateAssetMenu(fileName = "NewColorVariable", menuName = "ScriptableObjects/Variables/Color", order = 4)]
+	[CreateAssetMenu(fileName = "NewColorVariable", menuName = "Scriptable/Variables/Color", order = 4)]
 	public sealed class ColorVariable : GenericScriptableObject<Color>, IWithApplyChange<Color>
 	{
 		public bool ApplyChange(Color amount) => SetValue(amount);

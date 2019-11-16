@@ -18,7 +18,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Objects.Weapons
 		Trap
 	}
 
-	[CreateAssetMenu(fileName = "NewWeapon", menuName = "ScriptableObjects/In-Game/Weapon", order = 6)]
+	[CreateAssetMenu(fileName = "NewWeapon", menuName = "Scriptable/Objects/Weapons/Weapon", order = 6)]
 	public sealed class WeaponData : ScriptableObject
 	{
 		public string weaponName;

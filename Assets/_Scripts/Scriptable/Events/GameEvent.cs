@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Events
 {
-	[CreateAssetMenu(fileName = "NewEvent", menuName = "ScriptableObjects/Events/GameEvent", order = 1)]
+	[CreateAssetMenu(fileName = "NewEvent", menuName = "Scriptable/Events/GameEvent", order = 1)]
 	public sealed class GameEvent : ScriptableObject
 	{
 		/// <summary>

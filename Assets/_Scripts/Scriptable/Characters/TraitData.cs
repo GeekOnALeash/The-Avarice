@@ -1,12 +1,11 @@
 ﻿using System;
-using com.ArkAngelApps.TheAvarice.Controllers;
 using EasyButtons;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 {
-	[CreateAssetMenu(fileName = "NewTrait", menuName = "ScriptableObjects/In-Game/Characters/Trait", order = 4)]
+	[CreateAssetMenu(fileName = "NewTrait", menuName = "Scriptable/Character/Trait", order = 4)]
 	public sealed class TraitData : ScriptableObject
 	{
 		[Serializable]

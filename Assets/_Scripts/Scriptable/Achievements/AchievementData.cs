@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Achievements
 {
-	[CreateAssetMenu(fileName = "NewAchievement", menuName = "ScriptableObjects/Achievements/Achievement", order = 2)]
+	[CreateAssetMenu(fileName = "NewAchievement", menuName = "Scriptable/Achievements/Achievement", order = 2)]
 	public sealed class AchievementData : NotificationData, ISerializationCallbackReceiver
 	{
 		[SerializeField] private List<Property> properties;

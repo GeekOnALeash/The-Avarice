@@ -2,7 +2,7 @@
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Objects.Weapons
 {
-	[CreateAssetMenu(fileName = "NewParticleEffect", menuName = "ScriptableObjects/In-Game/ParticleEffect", order = 7)]
+	[CreateAssetMenu(fileName = "NewParticleEffect", menuName = "Scriptable/Scene/ParticleEffect", order = 7)]
 	public sealed class ParticleEffects : ScriptableObject
 	{
 		[SerializeField] private string effectName;

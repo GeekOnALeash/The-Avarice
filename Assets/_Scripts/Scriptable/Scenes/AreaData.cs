@@ -4,7 +4,7 @@ using Utilities;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Scenes
 {
-	[CreateAssetMenu(fileName = "NewArea", menuName = "ScriptableObjects/In-Game/Areas/Area", order = 1)]
+	[CreateAssetMenu(fileName = "NewArea", menuName = "Scriptable/Scene/Areas/Area", order = 1)]
 	public sealed class AreaData : ScriptableObject
 	{
 		public SceneField[] scenesToLoad;

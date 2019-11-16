@@ -13,7 +13,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Achievements
 		Float,
 	}
 
-	[CreateAssetMenu(fileName = "NewProperty", menuName = "ScriptableObjects/Achievements/Prototype", order = 1)]
+	[CreateAssetMenu(fileName = "NewProperty", menuName = "Scriptable/Achievements/Prototype", order = 1)]
 	public sealed class Property : ScriptableObject
 	{
 		public enum ActiveIf

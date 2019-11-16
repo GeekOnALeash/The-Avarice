@@ -11,7 +11,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.UI
 		Custom
 	}
 
-	[CreateAssetMenu(fileName = "NewMouseCursors", menuName = "ScriptableObjects/UI/Mouse Cursors", order = 4)]
+	[CreateAssetMenu(fileName = "NewMouseCursors", menuName = "Scriptable/UI/Mouse Cursors", order = 4)]
 	public sealed class MouseCursorData : ScriptableObject
 	{
 		public Texture2D defaultCursor;

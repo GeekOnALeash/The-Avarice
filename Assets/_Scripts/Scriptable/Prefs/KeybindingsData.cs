@@ -20,7 +20,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Prefs
 		Up
 	}
 
-	[CreateAssetMenu(fileName = "NewKeyBindings", menuName = "ScriptableObjects/Prefs/KeyBindings", order = 1)]
+	[CreateAssetMenu(fileName = "NewKeyBindings", menuName = "Scriptable/Prefs/KeyBindings", order = 1)]
 	public sealed class KeybindingsData : ScriptableObject
 	{
 		[Header("Mouse")]

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Events
 {
-	[CreateAssetMenu(menuName = "ScriptableObjects/Events/Audio Events/Simple")]
+	[CreateAssetMenu(menuName = "Scriptable/Events/Audio Events/Simple")]
 	public sealed class SimpleAudioEvent : AudioEvent
 	{
 		public AudioClip[] clips;

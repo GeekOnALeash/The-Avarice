@@ -10,7 +10,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Objects.Obstacles
 		ForceField
 	}
 
-	[CreateAssetMenu(fileName = "NewObstacle", menuName = "ScriptableObjects/In-Game/Obstacle", order = 5)]
+	[CreateAssetMenu(fileName = "NewObstacle", menuName = "Scriptable/Objects/Obstacle", order = 5)]
 	public class ObstacleData : ScriptableObject
 	{
 		public string animationName;

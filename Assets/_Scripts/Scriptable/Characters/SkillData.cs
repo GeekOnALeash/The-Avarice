@@ -20,7 +20,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 		Luck
 	}
 
-	[CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/In-Game/Characters/Skills", order = 3)]
+	[CreateAssetMenu(fileName = "NewItem", menuName = "Scriptable/Character/Skills", order = 3)]
 	public sealed class SkillData : ScriptableObject
 	{
 		/// <summary>
