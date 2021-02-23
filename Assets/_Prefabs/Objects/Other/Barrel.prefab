@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7959515185374641172}
   - component: {fileID: 4385987205054664622}
   - component: {fileID: 1081512173938513210}
+  - component: {fileID: 5260004620862529990}
   m_Layer: 16
   m_Name: Barrel
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 15
   m_SortingOrder: 2660
   m_Sprite: {fileID: 21300000, guid: bb1cce278599c4da298d061a867a08b6, type: 3}
-  m_Color: {r: 0.8962264, g: 0.16487186, b: 0.16487186, a: 1}
+  m_Color: {r: 0.6313726, g: 0.23921569, b: 0.3254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -164,6 +165,20 @@ MonoBehaviour:
   rb2D: {fileID: 4385987205054664622}
   scripts:
   - {fileID: 7928989276134594413}
-  - {fileID: 0}
+  - {fileID: 5260004620862529990}
   colliders:
   - {fileID: 7959515185374641172}
+--- !u!114 &5260004620862529990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280443796415663688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00aff9dd079c4f658029e835744091e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteBase: {fileID: 11400000, guid: 26ea014ad4dab4c5895f0e4f52c7eca8, type: 2}
+  spriteRenderer: {fileID: 8355940954842068798}

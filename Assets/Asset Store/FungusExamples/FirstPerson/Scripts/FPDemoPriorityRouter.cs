@@ -45,11 +45,5 @@ namespace Fungus.Examples
                 item.enabled = true;
             }
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

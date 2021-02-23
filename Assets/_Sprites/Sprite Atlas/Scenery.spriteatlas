@@ -40,14 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: d55184a835c234741af3c13470064820, type: 3}
-    totalSpriteSurfaceArea: 398386
     bindAsDefault: 1
-    storedHash:
-      serializedVersion: 2
-      Hash: f9c0aa8013026ca5cc8493e85732620f
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: f6082000f1bb447b287e58ef2f97540c, type: 3}
@@ -87,6 +87,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 18b729951ff0e4ca8a9439e8081f8bee, type: 3}
   - {fileID: 21300000, guid: ed017bc5a3d384bf1ad833620b25d483, type: 3}
   - {fileID: 21300000, guid: 097e01d57623d4ba087edb6c53019164, type: 3}
+  - {fileID: 21300000, guid: bb910a462bedd44a5904141dd4c96d83, type: 3}
   - {fileID: 21300000, guid: 825c6c669ae4c4a108139cc0b740fa90, type: 3}
   - {fileID: 21300000, guid: 999671863a04c471bbe029a1c8c1b24a, type: 3}
   - {fileID: 21300000, guid: 78b5a327d835247458f833a3ccdbb884, type: 3}
@@ -103,6 +104,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4d3df4f8ee71d4ef38dc3a0c4d73f3c5, type: 3}
   - {fileID: 21300000, guid: 908dbcf8c7eff4e01aad64c1500afa2b, type: 3}
   - {fileID: 21300000, guid: 148653397916042a1866a8fa3fef3e05, type: 3}
+  - {fileID: 21300000, guid: 2df1e34954ec142bfbd9ccf86453d264, type: 3}
   - {fileID: 21300000, guid: ea462d69dd8a14a5cb655b8a939ee2e5, type: 3}
   - {fileID: 21300000, guid: fc259379cdd604456b088cdab45f1ebc, type: 3}
   - {fileID: 21300000, guid: fdc13679ec9c0411fbc0eaa439c11aad, type: 3}
@@ -130,6 +132,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 225e43ac214e540fba514b5813270803, type: 3}
   - {fileID: 21300000, guid: c03230dc841de4f11a91b96904c54f21, type: 3}
   - {fileID: 21300000, guid: b3362fdcb3f1e4663a0aa0b78885b772, type: 3}
+  - {fileID: 21300000, guid: 385a42fc929eb46f0b29e13b4c27a6ba, type: 3}
   - {fileID: 21300000, guid: 7b64a50db89df49169223b646e44f1bc, type: 3}
   - {fileID: 21300000, guid: fbf7f60dde1ec4360a2c398bfea08c03, type: 3}
   - {fileID: 21300000, guid: 4f25501da98004311907b4aa46eef485, type: 3}
@@ -148,10 +151,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a1ed88af142d54e80a8359e86cccc9fe, type: 3}
   - {fileID: 21300000, guid: cd2d1cafb3bf147568ab6639e459a02f, type: 3}
   - {fileID: 21300000, guid: 6b8adcafb1eb842cfaaed4ee0a645492, type: 3}
-  - {fileID: 21300000, guid: 7195d9bf8fa59480787af1cf33ccf813, type: 3}
   - {fileID: 21300000, guid: db2ee0cf99d924756a70da324dff488d, type: 3}
   - {fileID: 21300000, guid: 0035d9cf81e13449c898812f3a94aa97, type: 3}
   - {fileID: 21300000, guid: 5a967def804cf424bbbb2e1e5bb1924a, type: 3}
+  - {fileID: 21300000, guid: 7195d9bf8fa59480787af1cf33ccf813, type: 3}
   m_PackedSpriteNamesToIndex:
   - Rail Top
   - Wall Upper Left Corner
@@ -190,6 +193,7 @@ SpriteAtlas:
   - Wall Corners Inner Double
   - Wall With Floor Corner Right
   - Door Frame Top
+  - Wall Front Side_OCC
   - Door Right Open
   - Wall With Floor Left Corner
   - Wall Upper Right Corner
@@ -206,6 +210,7 @@ SpriteAtlas:
   - Rail Left Corner Bottom
   - Doors Half Open
   - Wall Lower Right Corner
+  - Wall Front Side_DISP
   - Floor Tile Path Four Inner Corners
   - Wall Left Side
   - Stairs 1
@@ -233,6 +238,7 @@ SpriteAtlas:
   - Scratch 1
   - Floor Tile 3
   - Wall With Top
+  - Wall Front Side_SPEC
   - Wall Rear Side To Left Corner Down
   - Wall With Top Both Sides Inner Left Corner
   - Wall Shadow From Inner Corner
@@ -251,9 +257,10 @@ SpriteAtlas:
   - Force Field - Noise 1
   - Wall With Floor Left Side
   - Wall With Top Right Side
-  - Wall Front Side
   - Floor Tile Side Path Inner Corner
   - Floor Tile Side Path Top And Bottom Inner Corners
   - Floor Tile 1 Vented
+  - Wall Front Side
+  m_RenderDataMap: {}
   m_Tag: Scenery
   m_IsVariant: 0

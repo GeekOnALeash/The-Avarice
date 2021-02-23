@@ -1,16 +1,38 @@
 {
+    "scopedRegistries": [
+        {
+            "name": "NPM Registry",
+            "url": "https://registry.npmjs.org",
+            "scopes": [
+                "com.mambojambostudios.unity-atoms-core",
+                "com.mambojambostudios.unity-atoms-mobile",
+                "com.mambojambostudios.unity-atoms-mono-hooks",
+                "com.mambojambostudios.unity-atoms-tags",
+                "com.mambojambostudios.unity-atoms-scene-mgmt",
+                "com.mambojambostudios.unity-atoms-ui"
+            ]
+        }
+    ],
   "dependencies": {
-    "com.mambojambostudios.unity-atoms": "https://github.com/AdamRamberg/unity-atoms.git#canary",
+        "com.mambojambostudios.unity-atoms-core": "2.2.0",
+        "com.mambojambostudios.unity-atoms-mobile": "2.2.0",
+        "com.mambojambostudios.unity-atoms-mono-hooks": "2.2.0",
+        "com.mambojambostudios.unity-atoms-tags": "2.2.0",
+        "com.mambojambostudios.unity-atoms-scene-mgmt": "2.2.0",
+        "com.mambojambostudios.unity-atoms-ui": "2.2.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
-    "com.unity.ext.nunit": "1.0.0",
-    "com.unity.ide.rider": "1.1.1",
-    "com.unity.ide.vscode": "1.1.2",
-    "com.unity.inputsystem": "1.0.0-preview.1",
-    "com.unity.mathematics": "1.1.0",
-    "com.unity.render-pipelines.universal": "7.1.2",
-    "com.unity.test-framework": "1.1.5",
-    "com.unity.timeline": "1.2.6",
+    "com.unity.ext.nunit": "1.0.6",
+    "com.unity.ide.rider": "3.0.4",
+    "com.unity.ide.visualstudio": "2.0.7",
+    "com.unity.ide.vscode": "1.2.3",
+    "com.unity.inputsystem": "1.0.2",
+    "com.unity.mathematics": "1.2.1",
+    "com.unity.render-pipelines.universal": "11.0.0",
+    "com.unity.test-framework": "1.1.22",
+    "com.unity.testtools.codecoverage": "1.0.0-pre.3",
+    "com.unity.timeline": "1.5.1-pre.3",
+    "com.unity.toolchain.macos-x86_64-linux-x86_64": "0.1.19-preview",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
@@ -43,11 +65,5 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  },
-  "lock": {
-    "com.mambojambostudios.unity-atoms": {
-      "revision": "canary",
-      "hash": "4fe979be256d9c6a67a47ced7f35bc237179fb55"
-    }
   }
 }

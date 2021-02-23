@@ -40,14 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 02679bc1d60b44f0bad72b764c3fae19, type: 3}
-    totalSpriteSurfaceArea: 895
     bindAsDefault: 1
-    storedHash:
-      serializedVersion: 2
-      Hash: c086d4719c07b0b4ff970bacbdf13af0
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 902907300170146e4a072146c6dd9425, type: 3}
@@ -57,5 +57,6 @@ SpriteAtlas:
   - First Aid Kit
   - Key Card
   - First Aid Pack
+  m_RenderDataMap: {}
   m_Tag: Items
   m_IsVariant: 0

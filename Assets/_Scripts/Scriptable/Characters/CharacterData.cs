@@ -2,6 +2,7 @@ using System;
 using com.ArkAngelApps.TheAvarice.Composites;
 using com.ArkAngelApps.TheAvarice.Scriptable.Variables.Int;
 using EasyButtons;
+using RandomNameGen;
 using UnityEngine;
 using Random = System.Random;
 
@@ -71,10 +72,10 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Characters
 		[Button]
 		public void GenerateFemaleName()
 		{
-			GenerateName(Gender.Female);
+			GenerateName(Sex.Female);
 		}
 
-		public void GenerateName(Gender sex = Gender.Male)
+		public void GenerateName(Sex sex = Sex.Male)
 		{
 			Random rand = new Random(DateTime.Now.Second);
 			RandomName nameGen = new RandomName(rand);

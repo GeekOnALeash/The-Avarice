@@ -8,18 +8,11 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable
 	{
 		[SerializeField] private Sprite sprite;
 		[SerializeField] private Color color;
+		[SerializeField] private bool isFlipped;
 
-		private Sprite Sprite
-		{
-			get => sprite;
-			set => sprite = value;
-		}
-
-		private Color Color
-		{
-			get => color;
-			set => color = value;
-		}
+		public Sprite Sprite => sprite;
+		public Color Color => color;
+		public bool IsFlipped => isFlipped;
 
 		internal void SetSpriteToRenderer([NotNull] SpriteRenderer spriteRenderer)
 		{
@@ -31,11 +24,13 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable
 
 			if (sprite.Equals(null))
 			{
+				spriteRenderer.sprite = null;
 				return;
 			}
 
 			spriteRenderer.sprite = Sprite;
 			spriteRenderer.color = Color;
+			spriteRenderer.flipX = IsFlipped;
 		}
 	}
 }

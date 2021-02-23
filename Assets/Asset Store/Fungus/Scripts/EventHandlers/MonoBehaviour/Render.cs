@@ -56,11 +56,6 @@ namespace Fungus
             }
         }
 
-        private void OnRenderImage(RenderTexture source, RenderTexture destination)
-        {
-            //TODO
-        }
-
         private void OnRenderObject()
         {
             if ((FireOn & RenderMessageFlags.OnRenderObject) != 0)

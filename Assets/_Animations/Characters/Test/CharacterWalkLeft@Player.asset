@@ -15,7 +15,7 @@ MonoBehaviour:
   animationName: WalkLeft
   fps: 4
   frames:
-  - sprite: {fileID: 21300020, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
-  - sprite: {fileID: 21300018, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
-  - sprite: {fileID: 21300022, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - sprite: {fileID: 21300000, guid: aecbbf30d0eb5495fa463ef6e06c7f9b, type: 3}
+  - sprite: {fileID: 21300000, guid: a9d0908b059ad4e58b708175fb90a7f5, type: 3}
+  - sprite: {fileID: 21300000, guid: e28ee9020e6b542c3b7282f74b7d6d1b, type: 3}
   spriteAnimationType: 0

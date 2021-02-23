@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a5a106647147b79270e28502228655, type: 3}
+  m_Name: Test1@FrontWalk2
+  m_EditorClassIdentifier: 
+  bodySprite: {fileID: 11400000, guid: 64b884a0c6c5d479ca83c744a94dd673, type: 2}
+  hairSprite: {fileID: 11400000, guid: d77fd1884ee5e4a2c9609479e09dee4b, type: 2}
+  eyeLashesSprite: {fileID: 11400000, guid: ffe59070469954674a9db33e5ccfdf19, type: 2}
+  eyesSprite: {fileID: 11400000, guid: 242f90ba391f4496dbd971e1597b896d, type: 2}
+  eyeBaseSprite: {fileID: 11400000, guid: 03a7d57b79a55408d8a60f1f61ea7492, type: 2}
+  eyeMaskSprite: {fileID: 11400000, guid: 5ffa0965ff1d04be2bf5cb0fcbd06af0, type: 2}
+  hatSprite: {fileID: 0}
+  shirtSprite: {fileID: 11400000, guid: ea8e042149bae4f4b8fe43e9cb9adea4, type: 2}
+  trousersSprite: {fileID: 11400000, guid: 61b9bb089a1984635bba438d8dad806f, type: 2}
+  shoesSprite: {fileID: 11400000, guid: bf60ba9055b124b468acf3424a32f03e, type: 2}

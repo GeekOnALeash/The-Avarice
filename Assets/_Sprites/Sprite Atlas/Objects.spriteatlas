@@ -40,14 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 3cb405f9f0b684a15a857e31a70d0fe2, type: 3}
-    totalSpriteSurfaceArea: 37160
     bindAsDefault: 1
-    storedHash:
-      serializedVersion: 2
-      Hash: a84f67724c2d151e86f79c56cdcc1106
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 0e242f41662e74aae83e1f89dd5d2be9, type: 3}
@@ -63,7 +63,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9aef87b542697421ca1e9660727b160e, type: 3}
   - {fileID: 21300000, guid: 3a76ad76142ac471fa1541ad204ff6de, type: 3}
   - {fileID: 21300000, guid: ccdb6ab67fda9417c9d833a88a5538a3, type: 3}
-  - {fileID: 21300000, guid: bb1cce278599c4da298d061a867a08b6, type: 3}
   - {fileID: 21300000, guid: 3fd3b1b72893745a09987a2b5079469d, type: 3}
   - {fileID: 21300000, guid: f36e4a58e34e248849377928319a0162, type: 3}
   - {fileID: 21300000, guid: 96433bd8bdbc3429d90f0457e3a15774, type: 3}
@@ -91,6 +90,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f967355fdf410429fae5ad246d518e6d, type: 3}
   - {fileID: 21300000, guid: 438dfdbfbffd64f7e927e8901d6345c3, type: 3}
   - {fileID: 21300000, guid: 0b3f26cf8339d46c0a3e39464a022ff1, type: 3}
+  - {fileID: 21300000, guid: bb1cce278599c4da298d061a867a08b6, type: 3}
   m_PackedSpriteNamesToIndex:
   - Computer Terminal Display 2
   - Computer Terminal Display 1
@@ -105,7 +105,6 @@ SpriteAtlas:
   - Bars 4@Barchart-Small
   - Bars 1@Barchart-Medium
   - Display Frame
-  - Barrel
   - Large Computer Display
   - Desk With Computer
   - Display LCD
@@ -133,5 +132,7 @@ SpriteAtlas:
   - Frame1@Waveform Large
   - Barrel_n
   - Light Frame@Cookie
+  - Barrel
+  m_RenderDataMap: {}
   m_Tag: Objects
   m_IsVariant: 0

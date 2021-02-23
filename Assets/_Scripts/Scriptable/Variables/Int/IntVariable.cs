@@ -5,7 +5,7 @@ using NotImplementedException = System.NotImplementedException;
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Variables.Int
 {
 	[CreateAssetMenu(fileName = "NewIntValue", menuName = "Scriptable/Variables/Int/Int", order = 1)]
-	public class IntVariable : EquatableScriptableObjectVariable<int, IntEvent, IntIntEvent>, IWithApplyChange<int, IntEvent, IntIntEvent>
+	public class IntVariable : EquatableAtomVariable<int, IntEvent, IntIntEvent>, IWithApplyChange<int, IntEvent, IntIntEvent>
 	{
 		[SerializeField] protected int maxValue;
 
@@ -32,8 +32,6 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Variables.Int
 			return SetValue(total);
 		}
 
-		public bool ApplyChange(EquatableScriptableObjectVariable<int, IntEvent, IntIntEvent> amount) => throw new NotImplementedException();
-
-		protected override bool AreEqual(int first, int second) => first == second;
+		public bool ApplyChange(EquatableAtomVariable<int, IntEvent, IntIntEvent> amount) => throw new NotImplementedException();
 	}
 }
