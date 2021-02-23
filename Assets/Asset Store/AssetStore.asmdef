@@ -1,0 +1,16 @@
+{
+    "name": "AssetStore",
+    "rootNamespace": "",
+    "references": [
+        "GUID:952529aa9b3a344e3ad78209c82d20db"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

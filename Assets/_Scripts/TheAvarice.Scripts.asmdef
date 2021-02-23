@@ -1,0 +1,34 @@
+{
+    "name": "TheAvarice.Scripts",
+    "rootNamespace": "com.StellarPixels.TheAvarice",
+    "references": [
+        "GUID:14165214884ae4a619bfb290f28194a7",
+        "GUID:043b3c965bdb6468a902623aba44cc1d",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:bbf8f5c281edb4cd5b357383dfd79cab",
+        "GUID:55a94c912c8ad4588a8ae85f41895d1a",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:e2b1dc8da957548ea88c62f3ad265e54",
+        "GUID:bf875d70c81704c379e7ea3ddb20f785",
+        "GUID:465477b55e085487a8c10c5f9a766dae",
+        "GUID:aff632302a0b84b498c3f33f7639b4d3",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:8c4dd21966739024fbd72155091d199e",
+        "GUID:86c9d8e67265f41469be06142c397d17",
+        "GUID:4bf6f0d0a5ad54da892a9fd07c44f032"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

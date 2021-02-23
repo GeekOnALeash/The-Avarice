@@ -1,13 +1,14 @@
-using System;
-using System.Diagnostics.CodeAnalysis;
-using com.ArkAngelApps.UtilityLibraries.Attributes;
-using Unity.Mathematics;
-using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Rendering;
-
-namespace com.ArkAngelApps.TheAvarice.Behaviours
+namespace com.StellarPixels.TheAvarice.Behaviours
 {
+	using System;
+	using System.Diagnostics.CodeAnalysis;
+	using com.ArkAngelApps.TheAvarice.Behaviours;
+	using com.ArkAngelApps.UtilityLibraries.Attributes;
+	using Unity.Mathematics;
+	using UnityEngine;
+	using UnityEngine.Assertions;
+	using UnityEngine.Rendering;
+
 	[ExecuteInEditMode]
 	public sealed class IsometricSpriteRenderer : BaseBehaviour
 	{

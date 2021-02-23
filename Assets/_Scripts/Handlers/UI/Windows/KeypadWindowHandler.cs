@@ -72,6 +72,12 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 			_animator.SetTrigger(__Shake);
 		}
 
+		public override void DoClose()
+		{
+			calledBy.HideKeypad();
+			base.DoClose();
+		}
+
 		private void ReplaceCharAtPos(string newString)
 		{
 			_textToDisplay = _textToDisplay.ReplaceAt(_keysPressedCount - 1, 1, newString);

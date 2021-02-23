@@ -12,7 +12,7 @@ namespace com.ArkAngelApps.UtilityLibraries.Extensions
 		/// </summary>
 		/// <returns>Value from enum.</returns>
 		[UsedImplicitly]
-		public static T RandomItem<T>(this T _enum_) where T : IConvertible
+		public static T RandomItem<T>(this T _enum_)
 		{
 			var enumValues = Enum.GetValues(typeof(T));
 			return (T) enumValues.GetValue(Random.Range(0, enumValues.Length));
