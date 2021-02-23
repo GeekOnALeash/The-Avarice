@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using UnityAtoms;
-using UnityEngine;
 using IntVariable = com.ArkAngelApps.TheAvarice.Scriptable.Variables.Int.IntVariable;
+using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Scriptable.Achievements.Editor.Test
 {
@@ -10,7 +10,7 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable.Achievements.Editor.Test
 	public sealed class PropertyTest
 	{
 		private Property _property;
-		private IntVariable _intVariable;
+		private Variables.Int.IntVariable _intVariable;
 		private FloatVariable _floatVariable;
 		private BoolVariable _boolVariable;
 

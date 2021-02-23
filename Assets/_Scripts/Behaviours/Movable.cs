@@ -9,12 +9,11 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 	public abstract class Movable : BaseBehaviour
 	{
 		public FloatReference moveSpeed;
-
-		internal bool isMoving;
-
 		public Vector2Variable moveAxis;
 
 		protected bool movementEnabled = true;
+		protected Vector2 movement;
+		protected Vector2 pos;
 		protected Rigidbody2D rb2D;
 
 		protected virtual void Start()
@@ -31,10 +30,7 @@ namespace com.ArkAngelApps.TheAvarice.Behaviours
 
 		protected virtual void FixedUpdate()
 		{
-			if (isMoving)
-			{
-				DoMovement();
-			}
+			DoMovement();
 		}
 
 		public abstract void DoMovement();

@@ -13,15 +13,11 @@ MonoBehaviour:
   m_Name: DefaultCharacterSprites 1
   m_EditorClassIdentifier: 
   characterType: 0
-  bodySprite: {fileID: 11400000, guid: c7b365d47aeeb4a00870ce54a9916ddc, type: 2}
-  hairSprite: {fileID: 11400000, guid: d77fd1884ee5e4a2c9609479e09dee4b, type: 2}
-  eyeLashesSprite: {fileID: 11400000, guid: ffe59070469954674a9db33e5ccfdf19, type: 2}
-  eyesSprite: {fileID: 11400000, guid: 242f90ba391f4496dbd971e1597b896d, type: 2}
-  eyeBaseSprite: {fileID: 11400000, guid: 03a7d57b79a55408d8a60f1f61ea7492, type: 2}
-  eyeMaskSprite: {fileID: 11400000, guid: 5ffa0965ff1d04be2bf5cb0fcbd06af0, type: 2}
-  beardSprite: {fileID: 11400000, guid: 3566c87371ab046b4b8ed937a47f80fe, type: 2}
-  hatSprite: {fileID: 0}
-  shirtSprite: {fileID: 11400000, guid: 5d9d0d35b651c4abfb5aaa7d4936550f, type: 2}
-  beltSprite: {fileID: 11400000, guid: 29c32550aa7414dcc8476e948be77663, type: 2}
-  trousersSprite: {fileID: 11400000, guid: 74748a907770245ceb0aed1455203c29, type: 2}
-  shoesSprite: {fileID: 11400000, guid: bd9b48c13352d4522bc0bc35803ae3ce, type: 2}
+  frontIdle: {fileID: 11400000, guid: 0fabfb21f2a7f4d47b8ed9bec1a05fbc, type: 2}
+  frontWalk: {fileID: 11400000, guid: 0f818e9762f5d47eab3e9c8f847c9b3f, type: 2}
+  rearIdle: {fileID: 0}
+  rearWalk: {fileID: 0}
+  leftIdle: {fileID: 0}
+  leftWalk: {fileID: 0}
+  rightIdle: {fileID: 0}
+  rightWalk: {fileID: 0}

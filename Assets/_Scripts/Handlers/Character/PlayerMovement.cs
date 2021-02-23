@@ -1,71 +1,47 @@
-﻿using System.Collections.Generic;
-using com.ArkAngelApps.TheAvarice.Behaviours;
-using com.ArkAngelApps.TheAvarice.Scriptable.System;
-using JetBrains.Annotations;
+﻿using com.ArkAngelApps.TheAvarice.Behaviours;
+using com.ArkAngelApps.TheAvarice.Helpers.InputSystem;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Assertions;
+using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 {
 	public sealed class PlayerMovement : Movable
 	{
-		private NavMeshAgent _navMeshAgent;
+		private InputManager _input;
 
-		protected override void Start()
+		private void OnEnable()
 		{
-			base.Start();
-
-			_navMeshAgent = GetComponent<NavMeshAgent>();
-			Assert.IsNotNull(_navMeshAgent, "_navMeshAgent != null");
-
-			_navMeshAgent.updateUpAxis = false;
-			_navMeshAgent.updateRotation = false;
+			_input = new InputManager("Move", started: OnMove, performed: OnMove, canceled: OnMove);
+			_input.Enable();
 		}
 
-		private void Update()
+		private void OnDisable()
 		{
-			isMoving = Input.GetMouseButtonDown(0);
-			moveAxis.Value = _navMeshAgent.velocity.normalized;
-		}
-
-		private void MoveToClickPoint(Vector2 point)
-		{
-			_navMeshAgent.destination = point;
-
-			DebugDrawPath(_navMeshAgent.path.corners);
-		}
-
-		private static void DebugDrawPath([NotNull] IReadOnlyList<Vector3> corners)
-		{
-			if (corners.Count < 2)
-			{
-				return;
-			}
-
-			var i = 0;
-			for (; i < corners.Count - 1; i++)
-			{
-				Debug.DrawLine(corners[i], corners[i + 1], Color.blue);
-			}
-
-			Debug.DrawLine(corners[0], corners[1], Color.red);
+			_input.Disable();
 		}
 
 		[Il2CppSetOption(Option.NullChecks, false)]
 		public override void DoMovement()
 		{
-			if (!moveSpeed.UseConstant && moveSpeed.Variable == null)
+			if (!rb2D && moveSpeed._variable == null)
 			{
 				return;
 			}
 
-			isMoving = true;
+			movement = moveSpeed.Value * Time.deltaTime * moveAxis.Value;
 
-			Vector2 target = SystemVariables.Instance.mainCamera.camera.ScreenToWorldPoint(Input.mousePosition);
+			var position = transform.position;
+			pos.x = position.x;
+			pos.y = position.y;
 
-			MoveToClickPoint(target);
+			rb2D.MovePosition(pos + movement);
+		}
+
+		[Il2CppSetOption(Option.NullChecks, false)]
+		private void OnMove(InputAction.CallbackContext ctx)
+		{
+			moveAxis.Value = ctx.ReadValue<Vector2>();
 		}
 	}
 }

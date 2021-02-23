@@ -1,11 +1,17 @@
 ﻿using System.Collections.Generic;
+using com.ArkAngelApps.TheAvarice.Abstracts;
+using com.ArkAngelApps.TheAvarice.Scriptable.System;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace com.ArkAngelApps.TheAvarice.Nav
 {
-	public class NPCSimplePatrol : MonoBehaviour
+	public sealed class NPCSimplePatrol : CachedTransformBase
 	{
+		public float moveSpeed = 5;
+		public float turnSpeed = 5;
+		private Waypoint currentWayPoint;
+		private int currentWayPointIndex;
+
 		//Dictates whether the agent waits on each node.
 		[SerializeField] private bool patrolWaiting;
 
@@ -16,104 +22,91 @@ namespace com.ArkAngelApps.TheAvarice.Nav
 		[SerializeField] private float switchProbability = 0.2f;
 
 		//The list of all patrol nodes to visit.
-		[SerializeField] private List<Waypoint> patrolPoints;
+		[SerializeField] private List<Waypoint> wayPoints;
 
-		//Private variables for base behaviour.
-		private NavMeshAgent _navMeshAgent;
 		private int _currentPatrolIndex;
 		private bool _travelling;
 		private bool _waiting;
 		private bool _patrolForward;
 		private float _waitTimer;
 
-		// Use this for initialization
-		public void Start()
-		{
-			_navMeshAgent = GetComponent<NavMeshAgent>();
-			_navMeshAgent.updateUpAxis = false;
+		Vector3 direction;
 
-			if (_navMeshAgent == null)
+		private void Awake()
+		{
+			if (wayPoints.Count > 0)
 			{
-				Debug.LogError("The nav mesh agent component is not attached to " +
-				               gameObject.name);
+				currentWayPoint = wayPoints[0];
+				currentWayPointIndex = 0;
 			} else
 			{
-				if (patrolPoints != null && patrolPoints.Count >= 2)
-				{
-					_currentPatrolIndex = 0;
-					SetDestination();
-				} else
-				{
-					Debug.Log("Insufficient patrol points for basic patrolling behaviour.");
-				}
+				Debug.LogError("No waypoint assigned");
 			}
 		}
 
-		public void Update()
+		private void Update()
 		{
-			//Check if we're close to the destination.
-			if (_travelling && _navMeshAgent.remainingDistance <= 1.0f)
+			direction = currentWayPoint.transform.position - transform.position;
+			transform.Translate(Time.deltaTime * moveSpeed * direction);
+
+			if (currentWayPoint.IsWaypointReached(transform.position))
 			{
-				_travelling = false;
-
-				//If we're going to wait, then wait.
-				if (patrolWaiting)
-				{
-					_waiting = true;
-					_waitTimer = 0f;
-				} else
-				{
-					ChangePatrolPoint();
-					SetDestination();
-				}
-			}
-
-			//Instead if we're waiting.
-			if (_waiting)
-			{
-				_waitTimer += Time.deltaTime;
-				if (_waitTimer >= totalWaitTime)
-				{
-					_waiting = false;
-
-					ChangePatrolPoint();
-					SetDestination();
-				}
-			}
-		}
-
-		private void SetDestination()
-		{
-			if (patrolPoints != null)
-			{
-				var targetVector =
-					patrolPoints[_currentPatrolIndex].transform.position;
-
-				_navMeshAgent.SetDestination(targetVector);
-				_travelling = true;
+				NextWaypoint();
 			}
 		}
 
 		/// <summary>
-		/// Selects a new patrol point in the available list, but
-		/// also with a small probability allows for us to move forward or backwards.
+		/// Assign Next waypoint in the list.
 		/// </summary>
-		private void ChangePatrolPoint()
+		private void NextWaypoint()
 		{
-			if (Random.Range(0f, 1f) <= switchProbability)
+			currentWayPointIndex++; // try to increase the index
+			if (currentWayPointIndex > wayPoints.Count - 1)
 			{
-				_patrolForward = !_patrolForward;
+				currentWayPointIndex =
+					0; // if index is larger than list of waypoints, reset it to zero
 			}
 
-			if (_patrolForward)
+			currentWayPoint =
+				wayPoints
+					[currentWayPointIndex]; // assign current waypoint from the list
+		}
+
+		private void OnDrawGizmosSelected()
+		{
+			for (var i = 0; i < wayPoints.Count; i++)
 			{
-				_currentPatrolIndex =
-					(_currentPatrolIndex + 1) % patrolPoints.Count;
-			} else
-			{
-				if (--_currentPatrolIndex < 0)
+				if (i == 0)
 				{
-					_currentPatrolIndex = patrolPoints.Count - 1;
+					Gizmos.color = new Color(0, 0.4f, 0);
+				} else
+				{
+					Gizmos.color = new Color(0.6f, 1, 0.6f);
+				}
+
+				Gizmos.DrawSphere(wayPoints[i].transform.position, 0.2f);
+
+				if (wayPoints.Count > 1)
+				{
+					Gizmos.color = Color.blue;
+					if (i == 0)
+					{
+						Gizmos.DrawLine(wayPoints[0].transform.position,
+						                wayPoints[1].transform.position);
+					} else if (i == wayPoints.Count - 1)
+					{
+						Gizmos.DrawLine(wayPoints[i - 1].transform.position,
+						                wayPoints[i].transform.position);
+						Gizmos.color = Color.grey;
+						Gizmos
+							.DrawLine(wayPoints[wayPoints.Count - 1].transform.position,
+							          wayPoints[0].transform.position);
+					} else
+					{
+						Gizmos.color = Color.blue;
+						Gizmos.DrawLine(wayPoints[i - 1].transform.position,
+						                wayPoints[i].transform.position);
+					}
 				}
 			}
 		}

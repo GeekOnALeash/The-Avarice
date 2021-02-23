@@ -15,7 +15,7 @@ MonoBehaviour:
   animationName: WalkDown
   fps: 4
   frames:
-  - sprite: {fileID: 21300014, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
-  - sprite: {fileID: 21300012, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
-  - sprite: {fileID: 21300016, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - sprite: {fileID: 21300000, guid: 46a152e10fe924b3d93cd80a2df892f3, type: 3}
+  - sprite: {fileID: 21300000, guid: 7c8aa04e966c5414186edb79a21a4e26, type: 3}
+  - sprite: {fileID: 21300000, guid: 9ae26cd3804364eea9f09f1b825e52fe, type: 3}
   spriteAnimationType: 0

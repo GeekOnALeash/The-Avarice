@@ -15,7 +15,7 @@ MonoBehaviour:
   animationName: WalkUp
   fps: 4
   frames:
-  - sprite: {fileID: 21300002, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
-  - sprite: {fileID: 21300000, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
-  - sprite: {fileID: 21300004, guid: 9813473b4c91645679e1163f25de5b21, type: 3}
+  - sprite: {fileID: 21300000, guid: 4d5ad619a448f42e88e1d07d8ca81650, type: 3}
+  - sprite: {fileID: 21300000, guid: 5b699e90e479241cc835f7561b6f8248, type: 3}
+  - sprite: {fileID: 21300000, guid: 930cbd4539e61461fbc22dd8ce57a466, type: 3}
   spriteAnimationType: 0

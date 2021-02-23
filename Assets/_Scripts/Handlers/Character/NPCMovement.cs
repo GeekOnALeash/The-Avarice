@@ -8,8 +8,6 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 	public sealed class NPCMovement : Movable, IMovement
 	{
 		public Transform target;
-		public float minDistance = 1f;
-		public float maxDistance = 3f;
 
 		private float _currentDistance;
 
@@ -19,13 +17,6 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 			if (movementEnabled)
 			{
 				_currentDistance = Vector2.Distance(transform.position, target.position);
-				if (_currentDistance >= minDistance && _currentDistance <= maxDistance)
-				{
-					isMoving = true;
-				} else
-				{
-					isMoving = false;
-				}
 			}
 		}
 

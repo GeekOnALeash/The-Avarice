@@ -1,121 +1,52 @@
-﻿using System;
-using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
-using com.ArkAngelApps.TheAvarice.SimpleSpriteAnimator;
-using com.ArkAngelApps.UtilityLibraries.Extensions;
-using JetBrains.Annotations;
-using UnityAtoms;
+﻿using UnityAtoms;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Character
 {
-	[RequireComponent(typeof(SpriteRenderer))]
 	[RequireComponent(typeof(Animator))]
+	[DisallowMultipleComponent]
 	public class CharacterAnimation : MonoBehaviour
 	{
 		[SerializeField] private Vector2Variable moveAxis;
+		[SerializeField] private int totalIdleAnims;
 
-		[SerializeField] private CharacterAnimations characterAnimations;
-
-		private SpriteAnimation _currentAnim;
-		private SpriteRenderer _spriteRenderer;
 		private Animator _animator;
+		private bool _switchIdle;
 
-		private int _frameID;
-		private int _lastFrameID;
 		private static readonly int __PosY = Animator.StringToHash("posY");
 		private static readonly int __PosX = Animator.StringToHash("posX");
-		private static readonly int __IsMoving = Animator.StringToHash("isMoving");
-
-		public enum Direction
-		{
-			Idle,
-			Left,
-			Right,
-			Up,
-			Down
-		}
+		private static readonly int __IdleID = Animator.StringToHash("idleID");
 
 		private void Start()
 		{
-			_spriteRenderer = GetComponent<SpriteRenderer>();
 			_animator = GetComponent<Animator>();
+			Assert.IsNotNull(_animator);
 		}
 
-		private void LateUpdate()
+		[SerializeField] private float timeBetweenIdles = 10.0f;
+
+		void Update()
 		{
-			_animator.SetFloat(__PosY, moveAxis.Value.y);
-			_animator.SetFloat(__PosX, moveAxis.Value.x);
-
-			_animator.SetBool(__IsMoving, IsMoving());
-		}
-
-		private bool IsMoving() =>
-			Math.Abs(moveAxis.Value.x) > 0.1f && Math.Abs(moveAxis.Value.y) > 0.1f;
-
-		[UsedImplicitly]
-		public void SetAnimation(Direction direction)
-		{
-			_frameID = 0;
-
-			// ReSharper disable once ConvertSwitchStatementToSwitchExpression
-			switch (direction)
+			timeBetweenIdles -= Time.deltaTime;
+			if (timeBetweenIdles < 0)
 			{
-				case Direction.Idle:
-					_currentAnim = characterAnimations.idle.RandomItem();
-					break;
-				case Direction.Left:
-					_currentAnim = characterAnimations.walkLeft;
-					break;
-				case Direction.Right:
-					_currentAnim = characterAnimations.walkRight;
-					break;
-				case Direction.Up:
-					_currentAnim = characterAnimations.walkUp;
-					break;
-				case Direction.Down:
-					_currentAnim = characterAnimations.walkDown;
-					break;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+				_switchIdle = true;
 			}
-
-			_lastFrameID = _currentAnim.Frames.Count - 1;
 		}
 
-		[UsedImplicitly]
-		public void GetNextFrame()
+		private void FixedUpdate()
 		{
-			_frameID += 1;
+			_animator.SetInteger(__PosY, (int) moveAxis.Value.y);
+			_animator.SetInteger(__PosX, (int) moveAxis.Value.x);
 
-			if (_frameID > _lastFrameID)
+			if (moveAxis.Value.x != 0 || moveAxis.Value.y != 0 || !_switchIdle)
 			{
-				if (_currentAnim.SpriteAnimationType == SpriteAnimationType.Looping)
-				{
-					_frameID = 0;
-				} else
-				{
-					return;
-				}
-			}
-
-			SetAnimationFrameToRenderer(_frameID);
-		}
-
-		public void SetAnimationFrameToRenderer(int id)
-		{
-			if (_currentAnim == null)
-			{
-				Debug.Log($"{nameof(_currentAnim)} needs to be set within animation event before calling for frame.");
 				return;
 			}
 
-			if (_currentAnim.Frames.Count < id)
-			{
-				Debug.Log($"{nameof(id)} is out of range for animation frame.");
-				return;
-			}
-
-			_spriteRenderer.sprite = _currentAnim.Frames[id].Sprite;
+			_switchIdle = false;
+			_animator.SetInteger(__IdleID, Random.Range(0, totalIdleAnims));
 		}
 	}
 }

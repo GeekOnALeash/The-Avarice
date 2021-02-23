@@ -1,13 +1,26 @@
 using com.ArkAngelApps.TheAvarice.Scriptable;
-using com.ArkAngelApps.TheAvarice.Scriptable.Characters;
 using JetBrains.Annotations;
 using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 {
-	public class SpriteStyler : MonoBehaviour
+	[ExecuteInEditMode]
+	public abstract class SpriteStyler : MonoBehaviour
 	{
-		public CharacterSpriteBase spriteData;
+		protected virtual void Start()
+		{
+			SetSprites();
+		}
+
+		protected virtual void LateUpdate()
+		{
+			if (!Application.isPlaying)
+			{
+				SetSprites();
+			}
+		}
+
+		protected abstract void SetSprites();
 
 		internal static void SetSprite([CanBeNull] SpriteBase spriteBase,
 		                               [CanBeNull] SpriteRenderer spriteRenderer)

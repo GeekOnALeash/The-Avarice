@@ -40,14 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 2c875c61fbdbe46bb99dca8b62aac09a, type: 3}
-    totalSpriteSurfaceArea: 16353
     bindAsDefault: 1
-    storedHash:
-      serializedVersion: 2
-      Hash: 959e338c338b07c45af76ff785fbe139
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: e3adf84068a6640d688b41c03075de8a, type: 3}
@@ -119,5 +119,6 @@ SpriteAtlas:
   - Speech Bubble
   - Section 6 Glass
   - Section 2
+  m_RenderDataMap: {}
   m_Tag: UI
   m_IsVariant: 0

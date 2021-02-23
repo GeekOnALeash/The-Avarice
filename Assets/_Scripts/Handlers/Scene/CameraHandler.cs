@@ -7,6 +7,9 @@ using UnityEngine.Assertions;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 {
+	using com.ArkAngelApps.UtilityLibraries.Attributes;
+	using global::System;
+
 	[ExecuteInEditMode]
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Camera))]
@@ -18,6 +21,10 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 		//Public variable to store a reference to the player game object
 		[SerializeField] private GuidReference followTargetGUID;
 
+		public float interpVelocity;
+		public float minDistance;
+		public float followDistance;
+
 		[SerializeField] private float cameraZ = -10;
 
 		[SerializeField] private SpriteRenderer background;
@@ -25,6 +32,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 		internal new Camera camera;
 
 		private GameObject _followTargetObject;
+		private float3 _targetPos;
 
 		private void Awake()
 		{
@@ -46,7 +54,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 			FollowTarget();
 		}
 
-		private void FixedUpdate()
+		private void LateUpdate()
 		{
 			FollowTarget();
 		}
@@ -55,8 +63,21 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene
 		{
 			// Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
 			var position = _followTargetObject.transform.position;
-			float3 pos = new float3(position.x + offset.x, position.y + offset.y, cameraZ);
-			transform.position = pos;
+			//float3 pos = new float3(position.x + offset.x, position.y + offset.y, cameraZ);
+			//transform.position = pos;
+
+			var position1 = transform.position;
+			Vector3 posNoZ = position1;
+			posNoZ.z = position.z;
+
+			Vector3 targetDirection = (position - posNoZ);
+
+			interpVelocity = targetDirection.magnitude * 5f;
+
+			_targetPos = position1 + (targetDirection.normalized * (interpVelocity * Time.deltaTime));
+
+			position1 = Vector3.Lerp(position1, _targetPos + offset, 0.25f);
+			transform.position = position1;
 		}
 
 		internal bool IsVisibleToCamera([NotNull] Transform t)
