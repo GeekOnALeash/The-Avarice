@@ -20,6 +20,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1852957032386208926}
+          m_TargetAssemblyTypeName: 
           m_MethodName: TriggerEnter
           m_Mode: 1
           m_Arguments:
@@ -37,7 +38,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1852957032386208926}
+          m_TargetAssemblyTypeName: 
           m_MethodName: TriggerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: com.ArkAngelApps.TheAvarice.Handlers.UI.Windows.KeypadWindowHandler,
+            Assembly-CSharp
+          m_MethodName: DoClose
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -66,6 +81,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: d9547af7d14a5422996800b34de5d3b4, type: 2}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
@@ -95,6 +111,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
@@ -106,6 +123,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 5933439810034143600}
+          m_TargetAssemblyTypeName: 
           m_MethodName: ChangeColorWithHex
           m_Mode: 5
           m_Arguments:
@@ -133,15 +151,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 7893197322387134081, guid: 95972708eba084d1ea6e7a3f93b4ec01,
+    - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
         type: 3}
-      propertyPath: m_Offset.y
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893197322387134081, guid: 95972708eba084d1ea6e7a3f93b4ec01,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
         type: 3}
@@ -160,6 +173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -172,16 +190,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3718413837384849594, guid: 95972708eba084d1ea6e7a3f93b4ec01,
         type: 3}
@@ -202,6 +210,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893197322387134081, guid: 95972708eba084d1ea6e7a3f93b4ec01,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893197322387134081, guid: 95972708eba084d1ea6e7a3f93b4ec01,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95972708eba084d1ea6e7a3f93b4ec01, type: 3}

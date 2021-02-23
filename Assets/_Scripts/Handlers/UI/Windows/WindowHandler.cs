@@ -58,7 +58,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
 		}
 
 		[UsedImplicitly]
-		public void DoClose()
+		public virtual void DoClose()
 		{
 			if (_windowManager == null)
 			{

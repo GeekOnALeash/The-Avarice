@@ -54,13 +54,21 @@ namespace com.ArkAngelApps.TheAvarice.Managers
 
 		internal void CloseWindow(int index)
 		{
-			var window = windowList.GetItemUsingIndex(index);
+			try
+			{
+				var window = windowList.GetItemUsingIndex(index);
+				window.gameObject.SetActive(false);
+			}
+			catch (ArgumentOutOfRangeException e)
+			{
+				Console.WriteLine(e);
+				return;
+			}
 
 			// Negative number used to indicate to the handler its removed.
 			windowList.GetItemUsingIndex(index).WindowIndex = -1;
 			windowList.RemoveAt(index);
 
-			window.gameObject.SetActive(false);
 			UpdateAllIndices();
 
 			if (WindowCount() == 0)

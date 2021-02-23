@@ -1,0 +1,18 @@
+{
+    "name": "TheAvarice.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4bf6f0d0a5ad54da892a9fd07c44f032"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -9,6 +9,8 @@ using UnityEngine.InputSystem;
 
 namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 {
+	using com.ArkAngelApps.TheAvarice.Managers;
+
 	public sealed class ComputerTerminalHandler : MonoBehaviour
 	{
 		public int code;
@@ -17,8 +19,9 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 
 		private bool _withinTrigger;
 
-		private bool _keypadDisplayed;
+		private bool _keypadVisible;
 		private bool _codeCorrect;
+		private bool _keypadDisabled;
 		private InputManager _input;
 
 		public void OnEnable()
@@ -34,6 +37,11 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 
 		private void LateUpdate()
 		{
+			if (_keypadDisabled)
+			{
+				return;
+			}
+
 			if (_withinTrigger)
 			{
 				_input.Enable();
@@ -46,7 +54,7 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 		[UsedImplicitly]
 		public void TriggerEnter()
 		{
-			if (!enabled)
+			if (!enabled || _keypadDisabled)
 			{
 				return;
 			}
@@ -59,13 +67,14 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 		public void TriggerExit()
 		{
 			_withinTrigger = false;
-			Controller.UI.contextMessageUI.HideUI();
+			HideKeypad();
+			HideUI();
 		}
 
 		[Il2CppSetOption(Option.NullChecks, false)]
 		private void OnInteract(InputAction.CallbackContext ctx)
 		{
-			if (_withinTrigger)
+			if (_withinTrigger && !_keypadDisabled)
 			{
 				DisplayKeypad();
 			}
@@ -73,18 +82,36 @@ namespace com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects
 
 		private void DisplayKeypad()
 		{
-			if (_keypadDisplayed)
+			if (_keypadVisible || _keypadDisabled)
 			{
 				return;
 			}
 
 			Controller.UI.window.EnableKeypad(code, this);
-			_keypadDisplayed = true;
+			_keypadVisible = true;
 		}
 
 		internal void CodeCorrect()
 		{
 			onEnableEvent.Invoke();
+			HideKeypad();
+			DisableKeypad();
+		}
+
+		internal void HideKeypad()
+		{
+			_keypadVisible = false;
+		}
+
+		internal void DisableKeypad()
+		{
+			HideKeypad();
+			HideUI();
+			_keypadDisabled = true;
+		}
+
+		private void HideUI()
+		{
 			Controller.UI.contextMessageUI.HideUI();
 		}
 	}
