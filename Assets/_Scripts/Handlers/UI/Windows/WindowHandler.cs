@@ -1,13 +1,13 @@
-using System.Diagnostics.CodeAnalysis;
-using com.ArkAngelApps.TheAvarice.Abstracts;
-using com.ArkAngelApps.TheAvarice.Controllers;
-using com.ArkAngelApps.UtilityLibraries.ENUMS;
-using com.ArkAngelApps.TheAvarice.Managers;
-using JetBrains.Annotations;
-using UnityEngine;
-
-namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
+namespace com.StellarPixels.TheAvarice.Handlers.UI.Windows
 {
+	using System.Diagnostics.CodeAnalysis;
+	using com.ArkAngelApps.TheAvarice.Abstracts;
+	using com.ArkAngelApps.TheAvarice.Controllers;
+	using com.ArkAngelApps.TheAvarice.Managers;
+	using com.ArkAngelApps.UtilityLibraries.ENUMS;
+	using JetBrains.Annotations;
+	using UnityEngine;
+
 	/// <inheritdoc />
 	/// <summary>
 	/// Parent class for all windows inheriting from this class to provide basic control of windows.

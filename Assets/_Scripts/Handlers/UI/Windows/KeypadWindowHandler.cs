@@ -1,13 +1,13 @@
-using com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects;
-using com.ArkAngelApps.UtilityLibraries.Extensions;
-using JetBrains.Annotations;
-using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-
-namespace com.ArkAngelApps.TheAvarice.Handlers.UI.Windows
+namespace com.StellarPixels.TheAvarice.Handlers.UI.Windows
 {
+	using com.ArkAngelApps.TheAvarice.Handlers.Scene.Objects;
+	using com.ArkAngelApps.UtilityLibraries.Extensions;
+	using JetBrains.Annotations;
+	using UnityEngine;
+	using UnityEngine.Assertions;
+	using UnityEngine.EventSystems;
+	using UnityEngine.UI;
+
 	public sealed class KeypadWindowHandler : WindowHandler
 	{
 		[SerializeField] private Text displayText;

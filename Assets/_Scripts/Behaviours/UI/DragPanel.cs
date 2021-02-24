@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 namespace com.ArkAngelApps.TheAvarice.Behaviours
 {
+	using com.StellarPixels.TheAvarice.Handlers.UI.Windows;
+
 	public sealed class DragPanel : MonoBehaviour, IPointerDownHandler, IDragHandler
 	{
 		public WindowHandler window;
