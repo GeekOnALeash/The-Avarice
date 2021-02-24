@@ -8,6 +8,8 @@ using UnityEngine;
 
 namespace com.ArkAngelApps.TheAvarice.Managers
 {
+	using com.StellarPixels.TheAvarice.Handlers.UI.Windows;
+
 	public sealed class WindowManager : MonoBehaviour
 	{
 		public WindowsRuntimeSet windowList;
